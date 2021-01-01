@@ -3,18 +3,19 @@ package treeechan.treepaech.lab2;
 public class ChangeMachine {
     public static void main(String[] args){
         if (args.length == 4 ){
-           int n1 = Integer.parseInt(args[0]);
-           int n2 = Integer.parseInt(args[1]);
-           int n5 = Integer.parseInt(args[2]);   // Converted from text to numbers
-           int n10 = Integer.parseInt(args[3]);
+            int[] n = new int[4];
 
-             if (n1 >= 0 & n2 >= 0 & n5 >= 0 & n10 >= 0){
-                 int Sum = n1+(n2*2)+(n5*5)+(n10*10);  // Calculate total money
+            for(int i = 0; i<4 ; i++){
+                n[i] = Integer.parseInt(args[i]);  // Converted from text to numbers
+            }
+
+             if (n[0] >= 0 & n[1] >= 0 & n[2] >= 0 & n[3] >= 0){
+                 int Sum = n[0]+(n[1]*2)+(n[2]*5)+(n[3]*10);  // Calculate total money
                  int n1000,n500,n100,n20,remain;
                  System.out.println("1-bath cions : "+args[0]);
-                 System.out.println("2-bath cions : "+n2);
-                 System.out.println("5-bath cions : "+n5);
-                 System.out.println("10-bath cions : "+n10);
+                 System.out.println("2-bath cions : "+n[1]);
+                 System.out.println("5-bath cions : "+n[2]);
+                 System.out.println("10-bath cions : "+n[3]);
                  System.out.println("Total amount : "+Sum);   //  Total money
 
                  n1000 = Sum/1000;                 // Calculate bill 1000 baht
