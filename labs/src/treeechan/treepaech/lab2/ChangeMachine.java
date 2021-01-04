@@ -17,7 +17,9 @@ package treeechan.treepaech.lab2;
 
 public class ChangeMachine {
     public static void main(String[] args){
+
         if (args.length == 4 ){
+
             int[] amount = new int[4];
 
             for(int i = 0; i < 4 ; i++){
