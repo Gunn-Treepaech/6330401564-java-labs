@@ -1,4 +1,3 @@
-package treeechan.treepaech.lab2;
 
 /**
  * This  PrimitiveDataType program  is Define variable and Set variable value
@@ -10,6 +9,8 @@ package treeechan.treepaech.lab2;
  * Date:January 3, 2021
  *
  **/
+
+package treeechan.treepaech.lab2;
 
 public class PrimitiveDataType {
     public static void main(String[] args) {

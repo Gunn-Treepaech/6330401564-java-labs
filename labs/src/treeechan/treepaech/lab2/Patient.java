@@ -1,4 +1,3 @@
-package treeechan.treepaech.lab2;
 
 /**
  * This  Patient program  is to accept three arguments: name, age , city name
@@ -12,6 +11,7 @@ package treeechan.treepaech.lab2;
  *
  **/
 
+package treeechan.treepaech.lab2;
 
 public class Patient {
     public static void main(String[] args){
