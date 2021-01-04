@@ -19,9 +19,7 @@ public class ChangeMachine {
     public static void main(String[] args){
 
         if (args.length == 4 ){
-
             int[] amount = new int[4];
-
             for(int i = 0; i < 4 ; i++){
                 amount[i] = Integer.parseInt(args[i]);  // Converted from text to numbers
             }

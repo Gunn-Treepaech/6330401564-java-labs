@@ -23,7 +23,6 @@ public class CircleCalculator {
         if (args.length == 1) {
             radius = Float.parseFloat(args[0]);  // Converted from text to numbers
             if (radius >= 0) {
-
                 area = Math.PI * Math.pow(radius, 2);    // Area = PI*radius^2
                 System.out.println(String.format("An area of a circle with radius of " + args[0] + " is %.2f", area));
                 circle = Math.PI * 2 * radius;    // Circumference = 2*PI*radius
