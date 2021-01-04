@@ -1,7 +1,7 @@
 package treeechan.treepaech.lab2;
 
 /**
- * This  Patient program  is to accept one arguments: radius
+ * This  CircleCalculator program  is to accept one arguments: radius
  * ts output format is " An area of a circle with radius of <radius of a circle>  is area
  * A circumference is Circumference "
  *

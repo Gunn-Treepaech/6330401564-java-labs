@@ -1,7 +1,7 @@
 package treeechan.treepaech.lab2;
 
 /**
- * This  Patient program  is Define variable and Set variable value
+ * This  PrimitiveDataType program  is Define variable and Set variable value
  * ts output format is variable value
  *
  * Author:Treepaech Treechan
