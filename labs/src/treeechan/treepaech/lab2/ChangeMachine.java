@@ -38,11 +38,11 @@ public class ChangeMachine {
                  n20 = (sum % 1000 % 500 % 100) / 20;   // Calculate bill 20 baht
                  remain = sum % 1000 % 500 % 100 % 20; // Calculate remaining balance
 
-                 System.out.println("1000-bill : "+n1000);
-                 System.out.println("500-bill : "+n500);
-                 System.out.println("100-bill : "+n100);
-                 System.out.println("20-bill : "+n20);
-                 System.out.println("Money remain : "+remain);
+                 System.out.println("1000-bill : "+ n1000);
+                 System.out.println("500-bill : "+ n500);
+                 System.out.println("100-bill : "+ n100);
+                 System.out.println("20-bill : "+ n20);
+                 System.out.println("Money remain : "+ remain);
              }
              else   {
                  System.err.println("ChangeMachine <1-baht coins> <2-baht coins> <5-baht coins> <1B-baht coins> ** NoN negative **");
