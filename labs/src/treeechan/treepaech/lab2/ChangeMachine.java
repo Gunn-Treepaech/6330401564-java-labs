@@ -23,6 +23,7 @@ public class ChangeMachine {
             for(int i = 0; i < 4 ; i++){
                 amount[i] = Integer.parseInt(args[i]);  // Converted from text to numbers
             }
+
              if (amount[0] >= 0 & amount[1] >= 0 & amount[2] >= 0 & amount[3] >= 0){
                  int sum = amount[0] + (amount[1] * 2) + (amount[2] * 5) + (amount[3] * 10);  // Calculate total money
                  int number1000,number500,number100,number20,remain;
