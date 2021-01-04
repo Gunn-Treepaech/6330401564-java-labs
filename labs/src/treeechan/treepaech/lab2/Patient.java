@@ -1,5 +1,18 @@
 package treeechan.treepaech.lab2;
 
+/**
+ * This  Patient program  is to accept three arguments: name, age , city name
+ * ts output format is " Patient's name is <patient name> Patient's age is
+ * <patient age> <patient name>  come from <country>"
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:January 3, 2021
+ *
+ **/
+
+
 public class Patient {
     public static void main(String[] args){
         if (args.length == 3){

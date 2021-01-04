@@ -1,5 +1,16 @@
 package treeechan.treepaech.lab2;
 
+/**
+ * This  Patient program  is Define variable and Set variable value
+ * ts output format is variable value
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:January 3, 2021
+ *
+ **/
+
 public class PrimitiveDataType {
     public static void main(String[] args) {
         byte by = 120;   //-128 TO 127

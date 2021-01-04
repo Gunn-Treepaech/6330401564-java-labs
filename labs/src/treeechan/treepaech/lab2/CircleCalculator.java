@@ -1,5 +1,18 @@
 package treeechan.treepaech.lab2;
 
+/**
+ * This  Patient program  is to accept one arguments: radius
+ * ts output format is " An area of a circle with radius of <radius of a circle>  is area
+ * A circumference is Circumference "
+ *
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:January 3, 2021
+ *
+ **/
+
 public class CircleCalculator {
     public static void main(String[] args){
         float ra;

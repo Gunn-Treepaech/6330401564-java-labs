@@ -1,5 +1,19 @@
 package treeechan.treepaech.lab2;
 
+/**
+ * This  Patient program  is to accept four arguments: Coin amount 1 baht, Coin amount 2 baht
+ * , Coin amount 5 baht , Coin amount 10 baht
+ * ts output format is " 1000-bill : <Bank amount 1000 baht> , 500-bill : <Bank amount 500 baht>
+ * ,100-bill : <Bank amount 100 baht>, 20-bill : <Bank amount 20 baht>
+ *  ,Money remain : <remain>"
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:January 3, 2021
+ *
+ **/
+
 public class ChangeMachine {
     public static void main(String[] args){
         if (args.length == 4 ){

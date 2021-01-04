@@ -1,5 +1,18 @@
 package treeechan.treepaech.lab2;
 
+/**
+ * This  Patient program  is to accept two arguments: first word , second word
+ * ts output format is " The first word is   <First word>
+ *                       The second word is  <Second word>
+ *                       The concatenate with camel case is concatenate word "
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:January 3, 2021
+ *
+ **/
+
 public class CamelCaseNaming {
     public static void main(String[] args){
 
