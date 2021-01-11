@@ -35,7 +35,7 @@ public class GuessNumberGameV2 {
             userNum = getNum.nextLine();
             userNumInt = Integer.parseInt(userNum);
             if (userNumInt != correctNum){
-                if (userNumInt < correctNum){
+                if (userNumInt > correctNum){
                     System.out.println("Please type a Lower number! Number of remaining tries:" + (triesNum - numLoop));
                     // If the user's numbers are less than random numbers
                 }
