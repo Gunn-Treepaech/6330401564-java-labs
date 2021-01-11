@@ -16,10 +16,8 @@ package treeechan.treepaech.lab2;
 
 public class CircleCalculator {
     public static void main(String[] args){
-
         float radius;
         double area,circle;
-
         if (args.length == 1) {
             radius = Float.parseFloat(args[0]);  // Converted from text to numbers
             if (radius >= 0) {

@@ -14,7 +14,6 @@ package treeechan.treepaech.lab2;
 
 public class PrimitiveDataType {
     public static void main(String[] args) {
-
         byte bytenumber = 120;   //-128 TO 127
         short shortnumber = 32000;  //-32,768 TO 32,767
         int intnumber = 2000000000;  //-2,147,483,648 TO 2,147,483,647
@@ -23,7 +22,6 @@ public class PrimitiveDataType {
         double doublenumber = 1.123456789123;   //4.94065645841246544e-324 TO 1.79769313486231570e+308
         char letter = 'a';   //Single letter
         boolean bool = true; //  true OR false
-
         System.out.println(bool);
         System.out.println(bytenumber);
         System.out.println(floatnumber);
@@ -32,6 +30,5 @@ public class PrimitiveDataType {
         System.out.println(letter);
         System.out.println(shortnumber);
         System.out.println(doublenumber);
-
     }
 }
