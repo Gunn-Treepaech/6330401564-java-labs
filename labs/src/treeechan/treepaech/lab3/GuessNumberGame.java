@@ -21,8 +21,8 @@ public class GuessNumberGame {
         String userNum;
         int maxNum = 10;
         int minNum = 1;
-        int numLoop = 0, triesNum = 2;
-        int randomNum,userNumInt;
+        int numLoop = 1, triesNum = 3;
+        int randomNum, userNumInt;
         randomNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1)); // Random 1 number ( 1-10 )
         while (numLoop <= triesNum){
             System.out.print("Please enter a guess (1—10):");

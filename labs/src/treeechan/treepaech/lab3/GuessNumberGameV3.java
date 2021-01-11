@@ -32,7 +32,7 @@ public class GuessNumberGameV3 {
     public static void configGame(){
         Scanner userNum = new Scanner(System.in);
         Scanner triesNum = new Scanner((System.in));
-        String getUserNum,getTriesNum;
+        String getUserNum, getTriesNum;
         int minUser,maxUser;
         int deposit ;
         System.out.print("Enter the min and the max values:"); // Get the lowest maximum
