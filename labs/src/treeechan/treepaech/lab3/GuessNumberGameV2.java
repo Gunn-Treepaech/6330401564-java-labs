@@ -7,7 +7,7 @@
  * Author:Treepaech Treechan
  * ID: 633040156-4
  * Sec: 1
- * Date:January 10, 2021
+ * Date:January 11, 2021
  *
  **/
 
@@ -23,7 +23,7 @@ public class GuessNumberGameV2 {
         playGame();
     }
     public static void genAnswer(){
-        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
+        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1)); // Random 1 number ( 1-10 )
     }
     public static void playGame(){
         int numLoop = 0,triesNum = 2;
