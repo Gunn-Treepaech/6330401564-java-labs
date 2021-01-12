@@ -62,22 +62,19 @@ public class GuessNumberGameV3 {
             if (userNumInt < minNum || userNumInt > maxNum){
                 System.out.println("The guess number must be in the range " + minNum + " and " + maxNum);
                 // Enter numbers out of range
-            }
-            else {
+            } else {
                 if (userNumInt != correctNum){
                     if (userNumInt > correctNum){
                         System.out.println("Please type a Lower number! Number of remaining tries:" + (maxTries - numLoop));
-                        // If the user's numbers are less than random numbers
-                    }
-                    else {
+                        // If  user numbers are less than random numbers
+                    } else {
                         System.out.println("Please type a higher number! Number of remaining tries:" + (maxTries - numLoop));
-                        // If the user's numbers are greater than random numbers
+                        // If  user numbers are greater than random numbers
                     }
                     numLoop++; // Increase the value of numLoop by 1
-                }
-                else {
+                } else {
                     System.out.println("Congratulations!  That’s correct");
-                    // If the user's numbers are equal to random numbers
+                    // If  user numbers are equal to random numbers
                     playGame();
                 }
             }
@@ -92,8 +89,7 @@ public class GuessNumberGameV3 {
         confirmTXT = txt.nextLine();
         if (confirmTXT.equals(confirm)){
             playGames(); // Play the game again
-        }
-        else {
+        } else {
             System.exit(0);  // Stop the program
         }
     }
