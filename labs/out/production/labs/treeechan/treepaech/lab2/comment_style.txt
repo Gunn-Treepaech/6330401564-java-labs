@@ -1,0 +1,17 @@
+CamelCaseNaming
+    - variable names
+    - fwletter[i] doens't need to be array
+    - use variables for arguments args
+
+ChangeMachine
+    - amount would be hard to understand which index is keeping which type of coins. Use separate variables with appropriate names.
+    - use variables for arguments args
+    - number1000 shoule be somthing like numberOneThousandBahtBill
+
+CircleCalculator
+    - area - circleArea
+    - circle - circumference
+
+Patient
+    - use variables for arguments args
+
