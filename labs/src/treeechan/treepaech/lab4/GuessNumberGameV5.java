@@ -138,7 +138,7 @@ public class GuessNumberGameV5 {
                 copyArray[t+1] = deposit;
             }
         }
-        System.out.println(copyArray[0]);
+        System.out.println("Min = " + copyArray[0]);
         playGame();
     }
     public static void guessMax(){
@@ -152,7 +152,7 @@ public class GuessNumberGameV5 {
                 copyArray[t+1] = deposit;
             }
         }
-        System.out.println(copyArray[0]);
+        System.out.println("Max = " + copyArray[0]);
         playGame();
     }
 }
