@@ -73,14 +73,13 @@ public class GuessNumberGameV4 {
                         // If  user numbers are greater than random numbers
                     }
                     numLoop++; // Increase the value of numLoop by 1
-                } else {
-                    System.out.println("Congratulations!  That’s correct");
                     numGuesses++;
-                    // If  user numbers are equal to random numbers
+                } else {
+                    System.out.println("Congratulations!  That’s correct"); // If  user numbers are equal to random numbers
+                    numGuesses++;
                     playGame();
                 }
             }
-            numGuesses++;
         }
         playGame();
     }

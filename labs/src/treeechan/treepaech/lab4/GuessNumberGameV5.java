@@ -61,13 +61,13 @@ public class GuessNumberGameV5 {
                         // If  user numbers are greater than random numbers
                     }
                     numLoop++; // Increase the value of numLoop by 1
+                    numGuesses++;
                 } else {
-                    System.out.println("Congratulations!  That’s correct");
-                    // If  user numbers are equal to random numbers
+                    System.out.println("Congratulations!  That’s correct"); // If  user numbers are equal to random numbers
+                    numGuesses++;
                     playGame();
                 }
             }
-            numGuesses++;
         }
         playGame();
     }
@@ -76,7 +76,7 @@ public class GuessNumberGameV5 {
         String confirmTXT;
         System.out.println("If want to play again? type 'y' to continue or 'q' to quit:");
         System.out.println("Type 'a' to see all your guesses or 'g' to see a guess on a specific play.");
-        System.out.println("Type 'v' to see average or 'm' to see minimum or 'x' to see maximum of all your guesses");
+        System.out.println("Type 'v' to see average or 'm' to see minimum or 'x‘ to see maximum of all. your guesses");
         confirmTXT = txt.nextLine();
         switch (confirmTXT){
             case "y" : playGames(); // Play again
@@ -87,11 +87,11 @@ public class GuessNumberGameV5 {
                 break;
             case "g" : showSpecific(); // Show answers based on the position of the selected answer.
                 break;
-            case "v" : guessAverage();
-                break;
             case "m" : guessMin();
                 break;
             case "x" : guessMax();
+                break;
+            case "v" : guessAverage();
                 break;
         }
     }
@@ -128,29 +128,36 @@ public class GuessNumberGameV5 {
         playGame();
     }
     public static void guessMin(){
-        int deposit;
+        int depositMin;
         int[] copyArray;
         copyArray = guesses;
-        for (int t = 0; t > numGuesses-1; t++){
-            if (copyArray[t] < copyArray[t+1]){
-                deposit = copyArray[t];
-                copyArray[t] = copyArray[t+1];    // Switch minimum maximum value
-                copyArray[t+1] = deposit;
+        for (int i = 0; i < numGuesses; i++){
+            if (copyArray[i] < copyArray[i+1]){
+                depositMin = copyArray[i];
+                copyArray[i] = copyArray[i+1];    // Switch minimum maximum value
+                copyArray[i+1] = depositMin;
             }
         }
-        System.out.println("Min = " + copyArray[0]);
+        for (int i = 0; i < numGuesses; i++){
+            System.out.println(copyArray[i]);
+        }
+        System.out.println("Min = " + copyArray[numGuesses-1]);
         playGame();
+
     }
-    public static void guessMax(){
-        int deposit;
+    public static void guessMax() {
+        int depositMax;
         int[] copyArray;
         copyArray = guesses;
-        for (int t = 0; t < numGuesses-1; t++){
-            if (copyArray[t] < copyArray[t+1]){
-                deposit = copyArray[t];
-                copyArray[t] = copyArray[t+1];    // Switch minimum maximum value
-                copyArray[t+1] = deposit;
+        for (int i = 0; i < numGuesses; i++) {
+            if (copyArray[i] < copyArray[i + 1]) {
+                depositMax = copyArray[i];
+                copyArray[i] = copyArray[i + 1];    // Switch minimum maximum value
+                copyArray[i + 1] = depositMax;
             }
+        }
+        for (int i = 0; i < numGuesses; i++) {
+            System.out.println(copyArray[i]);
         }
         System.out.println("Max = " + copyArray[0]);
         playGame();
