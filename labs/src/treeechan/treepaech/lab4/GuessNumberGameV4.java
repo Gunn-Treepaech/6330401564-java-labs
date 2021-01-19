@@ -1,12 +1,12 @@
 /**
- * This program GuessNumberGameV3 accepts minimum, maximum, number of tries.
+ * This program GuessNumberGameV4 accepts minimum, maximum, number of tries.
  * This program will randomize 1 number and have the player guess that number.
  * Where players set their own range and maximum number of guesses
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
  * Sec: 1
- * Date:January 18, 2021
+ * Date:January 19, 2021
  *
  **/
 

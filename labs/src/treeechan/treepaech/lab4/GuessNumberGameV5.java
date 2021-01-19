@@ -1,3 +1,14 @@
+/**
+ * This program GuessNumberGameV5 accepts minimum, maximum, number of tries.
+ *
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:January 19, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab4;
 
 import java.util.Scanner;
@@ -87,11 +98,11 @@ public class GuessNumberGameV5 {
                 break;
             case "g" : showSpecific(); // Show answers based on the position of the selected answer.
                 break;
-            case "m" : guessMin();
+            case "m" : guessMin();   // Show the lowest guessed value.
                 break;
-            case "x" : guessMax();
+            case "x" : guessMax(); // Show maximum guessed value
                 break;
-            case "v" : guessAverage();
+            case "v" : guessAverage();  // Shows the average of all answers.
                 break;
         }
     }
@@ -121,45 +132,36 @@ public class GuessNumberGameV5 {
         float sum = 0;
         float average;
         for (int j = 0; j < numGuesses; j++){
-            sum += guesses[j];
+            sum += guesses[j]; // Sum the values of all answers.
         }
         average = sum / numGuesses;
-        System.out.println("Average = " + average);
+        System.out.println("Average = " + average);  // Shows the average of all answers.
         playGame();
     }
-    public static void guessMin(){
+    public static int[] sortNumbers(){
         int depositMin;
         int[] copyArray;
         copyArray = guesses;
         for (int i = 0; i < numGuesses; i++){
             if (copyArray[i] < copyArray[i+1]){
                 depositMin = copyArray[i];
-                copyArray[i] = copyArray[i+1];    // Switch minimum maximum value
+                copyArray[i] = copyArray[i+1];    // Sort the numbers in the array.
                 copyArray[i+1] = depositMin;
             }
         }
-        for (int i = 0; i < numGuesses; i++){
-            System.out.println(copyArray[i]);
-        }
-        System.out.println("Min = " + copyArray[numGuesses-1]);
+        return copyArray;
+    }
+    public static void guessMin(){
+        int[] copyArray;
+        copyArray = sortNumbers();
+        System.out.println("Min = " + copyArray[numGuesses-1]); // Show maximum guessed value
         playGame();
 
     }
     public static void guessMax() {
-        int depositMax;
         int[] copyArray;
-        copyArray = guesses;
-        for (int i = 0; i < numGuesses; i++) {
-            if (copyArray[i] < copyArray[i + 1]) {
-                depositMax = copyArray[i];
-                copyArray[i] = copyArray[i + 1];    // Switch minimum maximum value
-                copyArray[i + 1] = depositMax;
-            }
-        }
-        for (int i = 0; i < numGuesses; i++) {
-            System.out.println(copyArray[i]);
-        }
-        System.out.println("Max = " + copyArray[0]);
+        copyArray = sortNumbers();
+        System.out.println("Max = " + copyArray[0]); // Show the lowest guessed value.
         playGame();
     }
 }
