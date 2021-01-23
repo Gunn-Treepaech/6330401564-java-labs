@@ -1,6 +1,12 @@
 /**
  * This program GuessNumberGameV5 accepts minimum, maximum, number of tries.
- *
+ * output format is " Enter numbers out of range <The guess number must be in the range minNum and maxNum>
+ *                    If the user's numbers are less than random numbers <Please type a Lower number!>
+ *                    If the user's numbers are greater than random numbers <Please type a higher number!>
+ *                    If the user's numbers are equal to random numbers <Congratulations!  That’s correct>
+ *                    If want to play again? type 'y' to continue or 'q' to quit
+ *                    Type 'a' to see all your guesses or 'g' to see a guess on a specific play
+ *                    Type 'v' to see average or 'm' to see minimum or 'x‘ to see maximum of all. your guesses"
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

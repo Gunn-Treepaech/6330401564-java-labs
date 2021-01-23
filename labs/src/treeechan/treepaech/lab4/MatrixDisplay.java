@@ -1,6 +1,13 @@
 /**
  * This program MatrixDisplay accepts Number of Row, Number of Column , Number in Matrix
- *
+ * output format is " Enter number of row then number of column of a matrix: <rowDimension><columnDimension>
+ *                    Enter your matrix by row <Get the number of digits in the matrix>
+ *                    Showing original matrix: <showMatrix>
+ *                    Show matrix by columns : <showMatrixByRow>
+ *                    Show matrix by rows : <showMatrixByColumn>
+ *                    Show matrix by columns backward : <showMatrixByRowBackward>
+ *                    Show matrix by rows backward : <showMatrixByColumnBackward>
+ *                    Show matrix by rows zigzag : <showMatrixByRowZigzag>"
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
