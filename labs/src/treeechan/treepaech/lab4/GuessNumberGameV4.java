@@ -91,6 +91,7 @@ public class GuessNumberGameV4 {
         confirmTXT = txt.nextLine();
         switch (confirmTXT){
             case "y" : playGames(); // Play again
+                       genAnswer();
                 break;
             case "q" : System.exit(0);  // Exit the program
                 break;
