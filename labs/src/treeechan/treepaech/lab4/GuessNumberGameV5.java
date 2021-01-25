@@ -118,7 +118,7 @@ public class GuessNumberGameV5 {
     }
     public static void showGuesses(){
         for (int i = 0; i < numGuesses; i++ ){
-            System.out.print(guesses[i]+" ");   // Displays the numbers in the respective array.
+            System.out.print(guesses[i] + " ");   // Displays the numbers in the respective array.
         }
         System.out.println(); // Show spaces
         playGame();
@@ -132,7 +132,7 @@ public class GuessNumberGameV5 {
             numTriesString = numTries.nextLine();
             numTriesInt = Integer.parseInt(numTriesString);  // Convert to numbers
         } while (numTriesInt < 1 || numTriesInt > numGuesses );
-        System.out.println("Guess number " + numTriesInt +" is " + guesses[numTriesInt-1]);
+        System.out.println("Guess number " + numTriesInt +" is " + guesses[numTriesInt - 1]);
         playGame();
     }
     public static void guessAverage(){
@@ -150,10 +150,10 @@ public class GuessNumberGameV5 {
         int[] copyArray;
         copyArray = guesses;
         for (int i = 0; i < numGuesses; i++){
-            if (copyArray[i] < copyArray[i+1]){
+            if (copyArray[i] < copyArray[i + 1]){
                 depositMin = copyArray[i];
-                copyArray[i] = copyArray[i+1];    // Sort the numbers in the array.
-                copyArray[i+1] = depositMin;
+                copyArray[i] = copyArray[i + 1];    // Sort the numbers in the array.
+                copyArray[i + 1] = depositMin;
             }
         }
         return copyArray;
@@ -161,7 +161,7 @@ public class GuessNumberGameV5 {
     public static void guessMin(){
         int[] copyArray;
         copyArray = sortNumbers();
-        System.out.println("Min = " + copyArray[numGuesses-1]); // Show maximum guessed value
+        System.out.println("Min = " + copyArray[numGuesses - 1]); // Show maximum guessed value
         playGame();
 
     }

@@ -40,7 +40,7 @@ public class GuessNumberGameV4 {
         maxUser = userNum.nextInt();
         System.out.print("Enter the number of tries:");  // Get the number of times you can try
         getTriesNum = triesNum.nextLine();
-        if (minUser>maxUser){
+        if (minUser > maxUser){
             deposit = maxUser;
             maxUser = minUser;    // Switch minimum maximum value
             minUser = deposit;
@@ -105,8 +105,8 @@ public class GuessNumberGameV4 {
         guesses[numGuesses] = number; // Collect numbers into Array guesses
     }
     public static void showGuesses(){
-        for (int i = 0; i < numGuesses; i++ ){
-            System.out.print(guesses[i]+" ");   // Displays the numbers in the respective array.
+        for (int i = 0; i < numGuesses; i++){
+            System.out.print(guesses[i] + " ");   // Displays the numbers in the respective array.
         }
         System.out.println(); // Show spaces
         playGame();

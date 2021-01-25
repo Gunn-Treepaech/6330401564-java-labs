@@ -81,8 +81,8 @@ public class MatrixDisplay {
     public static void showMatrixByColumnBackward(){
         // Displays the numbers in a matrix that are arranged from behind by rows.
         System.out.print("Show matrix by columns backward : ");
-        for (int i = columnDimension-1; i >= 0; i--){
-            for (int j = rowDimension-1; j >= 0; j--){
+        for (int i = columnDimension - 1; i >= 0; i--){
+            for (int j = rowDimension - 1; j >= 0; j--){
                 System.out.print(matrix[j][i] + " "); //
             }
         }
@@ -91,7 +91,7 @@ public class MatrixDisplay {
     public static void showMatrixByRowBackward(){
         // Displays the numbers in a matrix that are arranged from behind by columns
         System.out.print("Show matrix by rows backward : ");
-        for (int i = rowDimension-1; i >= 0; i--){
+        for (int i = rowDimension - 1; i >= 0; i--){
             for (int j = columnDimension-1; j >= 0; j--){
                 System.out.print(matrix[i][j] + " ");
             }
@@ -99,9 +99,11 @@ public class MatrixDisplay {
         System.out.println();
     }
     public static void showMatrixByRowZigzag(){
+        int zigzagNum;
         System.out.print("Show matrix by rows zigzag : ");
         for (int i = 0; i < rowDimension; i++){
-            if (i == 1){
+            zigzagNum = i % 2;
+            if (zigzagNum != 0){
                 // Show from back to front
                 for (int j = columnDimension - 1; j >= 0; j--) {
                     System.out.print(matrix[i][j] + " ");
