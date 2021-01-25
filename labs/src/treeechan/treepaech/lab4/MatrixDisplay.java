@@ -45,35 +45,35 @@ public class MatrixDisplay {
         }
         matrix = new int[rowDimension][columnDimension]; // Create an array based on the number of rows and columns.
         System.out.println("Enter your matrix by row.");
-        for (int i = 0; i < rowDimension; i++){
-           for (int j = 0; j < columnDimension; j++){
-               matrix[i][j] = number.nextInt();  // Get the number of digits in the matrix.
+        for (int row = 0; row < rowDimension; row++){
+           for (int column = 0; column < columnDimension; column++){
+               matrix[row][column] = number.nextInt();  // Get the number of digits in the matrix.
            }
         }
     }
     public static void showMatrix(){
         System.out.println("Showing original matrix:");
-        for (int i = 0; i < rowDimension; i++){
-            for (int j = 0; j < columnDimension; j++){
-                System.out.print(matrix[i][j] + " "); // Show the numbers in the matrix.
+        for (int row = 0; row < rowDimension; row++){
+            for (int column = 0; column < columnDimension; column++){
+                System.out.print(matrix[row][column] + " "); // Show the numbers in the matrix.
             }
             System.out.println(); // Show spaces
         }
     }
     public static void showMatrixByColumn(){
         System.out.print("Show matrix by columns : ");
-        for (int i = 0; i < columnDimension; i++){
-            for (int j = 0; j < rowDimension; j++){
-                System.out.print(matrix[j][i] + " "); // Display the numbers in the matrix sorted by columns.
+        for (int column = 0; column < columnDimension; column++){
+            for (int row = 0; row < rowDimension; row++){
+                System.out.print(matrix[row][column] + " "); // Display the numbers in the matrix sorted by columns.
             }
         }
         System.out.println();
     }
     public static void showMatrixByRow(){
         System.out.print("Show matrix by rows : ");
-        for (int i = 0; i < rowDimension; i++){
-            for (int j = 0; j < columnDimension; j++){
-                System.out.print(matrix[i][j] + " "); // Show numbers in a matrix that are arranged by rows.
+        for (int row = 0; row < rowDimension; row++){
+            for (int column = 0; column < columnDimension; column++){
+                System.out.print(matrix[row][column] + " "); // Show numbers in a matrix that are arranged by rows.
             }
         }
         System.out.println();
@@ -81,9 +81,9 @@ public class MatrixDisplay {
     public static void showMatrixByColumnBackward(){
         // Displays the numbers in a matrix that are arranged from behind by rows.
         System.out.print("Show matrix by columns backward : ");
-        for (int i = columnDimension - 1; i >= 0; i--){
-            for (int j = rowDimension - 1; j >= 0; j--){
-                System.out.print(matrix[j][i] + " "); //
+        for (int column = columnDimension - 1; column >= 0; column--){
+            for (int row = rowDimension - 1; row >= 0; row--){
+                System.out.print(matrix[row][column] + " "); //
             }
         }
         System.out.println();
@@ -91,9 +91,9 @@ public class MatrixDisplay {
     public static void showMatrixByRowBackward(){
         // Displays the numbers in a matrix that are arranged from behind by columns
         System.out.print("Show matrix by rows backward : ");
-        for (int i = rowDimension - 1; i >= 0; i--){
-            for (int j = columnDimension-1; j >= 0; j--){
-                System.out.print(matrix[i][j] + " ");
+        for (int row = rowDimension - 1; row >= 0; row--){
+            for (int column = columnDimension-1; column >= 0; column--){
+                System.out.print(matrix[row][column] + " ");
             }
         }
         System.out.println();
@@ -101,16 +101,16 @@ public class MatrixDisplay {
     public static void showMatrixByRowZigzag(){
         int zigzagNum;
         System.out.print("Show matrix by rows zigzag : ");
-        for (int i = 0; i < rowDimension; i++){
-            zigzagNum = i % 2;
+        for (int row = 0; row < rowDimension; row++){
+            zigzagNum = row % 2;
             if (zigzagNum != 0){
                 // Show from back to front
-                for (int j = columnDimension - 1; j >= 0; j--) {
-                    System.out.print(matrix[i][j] + " ");
+                for (int column = columnDimension - 1; column >= 0; column--) {
+                    System.out.print(matrix[row][column] + " ");
                 }
             } else {
-                for (int j = 0; j < columnDimension; j++) {
-                    System.out.print(matrix[i][j] + " ");
+                for (int column = 0; column < columnDimension; column++) {
+                    System.out.print(matrix[row][column] + " ");
                 }
             }
         }
