@@ -1,6 +1,6 @@
 /**
  * This  GuessNumberGameV2 program receives a number of numbers.
- * ts output format is " If the user's numbers are less than random numbers <Please type a Lower number!>
+ * ts output format is " If the user's numbers are less than random numbers <Please type a lower number!>
  *                       If the user's numbers are greater than random numbers <Please type a higher number!>
  *                       If the user's numbers are equal to random numbers <Congratulations!  That’s correct> "
  *

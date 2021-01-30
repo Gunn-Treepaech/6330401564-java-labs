@@ -24,7 +24,7 @@ public class GuessNumberGameV3 {
     public static void main(String[] args){
         configGame();
         genAnswer();
-        playGames();
+        playGame();
     }
     public static void genAnswer(){
         correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));  // Random 1 number ( min-max )
@@ -32,15 +32,13 @@ public class GuessNumberGameV3 {
     public static void configGame(){
         Scanner userNum = new Scanner(System.in);
         Scanner triesNum = new Scanner((System.in));
-        String getUserNum, getTriesNum;
-        int minUser,maxUser;
+        int minUser, maxUser, getTriesNum ;
         int deposit ;
         System.out.print("Enter the min and the max values:"); // Get the lowest maximum
-        getUserNum = userNum.nextLine();
+        minUser = userNum.nextInt();
+        maxUser = userNum.nextInt();
         System.out.print("Enter the number of tries:");  // Get the number of times you can try
-        getTriesNum = triesNum.nextLine();
-        minUser = Integer.parseInt(getUserNum.substring(0,1)); // Convert to numbers
-        maxUser = Integer.parseInt(getUserNum.substring(2));   // Convert to numbers
+        getTriesNum = triesNum.nextInt();
         if (minUser>maxUser){
             deposit = maxUser;
             maxUser = minUser;    // Switch minimum maximum value
@@ -48,9 +46,9 @@ public class GuessNumberGameV3 {
         }
         minNum = minUser;   // change static value
         maxNum = maxUser;
-        maxTries = Integer.parseInt(getTriesNum);  // Convert to numbers
+        maxTries = getTriesNum; // Convert to numbers
     }
-    public static void playGames(){
+    public static void playGame(){
         int numLoop = 1;
         int userNumInt;
         Scanner getNum = new Scanner(System.in);
@@ -75,20 +73,21 @@ public class GuessNumberGameV3 {
                 } else {
                     System.out.println("Congratulations!  That’s correct");
                     // If  user numbers are equal to random numbers
-                    playGame();
+                    playGames();
                 }
             }
         }
-        playGame();
+        playGames();
     }
-    public static void playGame(){
+    public static void playGames(){
         Scanner txt = new Scanner(System.in);
         String confirmTXT;
         String confirm = "y";
         System.out.print("If want to play again? type 'y' to continue or 'q' to quit:");
         confirmTXT = txt.nextLine();
         if (confirmTXT.equals(confirm)){
-            playGames(); // Play the game again
+            playGame(); // Play the game again
+            genAnswer();
         } else {
             System.exit(0);  // Stop the program
         }
