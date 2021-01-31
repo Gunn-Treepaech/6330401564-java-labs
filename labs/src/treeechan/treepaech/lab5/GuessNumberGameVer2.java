@@ -16,9 +16,9 @@ package treeechan.treepaech.lab5;
 import java.util.Scanner;
 
 class GuessNumberGameVer2 extends GuessNumberGameVer1{
-    private final int MAX_GUESSES = 20;
-    private static int[] guesses;
-    private static int numGuesses = 0;
+    protected final int MAX_GUESSES = 20;
+    protected static int[] guesses;
+    protected static int numGuesses = 0;
 
     public GuessNumberGameVer2(){
         super();     // Send variable to GuessNumberGameVer1
