@@ -53,7 +53,6 @@ class GuessNumberGameVer2 extends GuessNumberGameVer1{
     public void playGame(){
         int numLoop = 1;
         int userNumInt;
-        int correctNum = minNum + (int) (Math.random() * (maxNum - minNum + 1));
         Scanner getNum = new Scanner(System.in);
         String userNum;
         while (numLoop <= maxTries){

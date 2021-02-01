@@ -19,6 +19,7 @@ public class GuessNumberGameVer1 {
     protected int maxNum = 10;
     protected int maxTries = 3;
     protected static int numOfGames = 0;
+    protected int correctNum;
 
     @Override // Change according to the calling object
     public String toString() {
@@ -46,14 +47,17 @@ public class GuessNumberGameVer1 {
         this.maxTries = maxTries;  // Change the maxTries variable
     }
     public GuessNumberGameVer1(){
+        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         numOfGames++;
     }
     public GuessNumberGameVer1(int minNum, int maxNum){
+        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         numOfGames++;
     }
     public GuessNumberGameVer1(int minNum, int maxNum, int maxTries){
+        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         this.maxTries = maxTries; // Change the maxTries variable
@@ -66,7 +70,6 @@ public class GuessNumberGameVer1 {
         Scanner getNum = new Scanner(System.in);
         int numLoop = 1;
         int userNumInt;
-        int correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         String userNum;
         while (numLoop <= maxTries){
             System.out.print("Please enter a guess (" + minNum + "-" + maxNum + "):");
