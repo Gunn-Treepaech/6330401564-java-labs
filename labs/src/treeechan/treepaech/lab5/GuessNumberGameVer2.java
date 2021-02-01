@@ -51,6 +51,7 @@ class GuessNumberGameVer2 extends GuessNumberGameVer1{
     }
     @Override // Change according to the calling object
     public void playGame(){
+        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         int numLoop = 1;
         int userNumInt;
         Scanner getNum = new Scanner(System.in);

@@ -47,17 +47,14 @@ public class GuessNumberGameVer1 {
         this.maxTries = maxTries;  // Change the maxTries variable
     }
     public GuessNumberGameVer1(){
-        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         numOfGames++;
     }
     public GuessNumberGameVer1(int minNum, int maxNum){
-        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         numOfGames++;
     }
     public GuessNumberGameVer1(int minNum, int maxNum, int maxTries){
-        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         this.maxTries = maxTries; // Change the maxTries variable
@@ -67,6 +64,7 @@ public class GuessNumberGameVer1 {
         return numOfGames; // Send back numOfGames
     }
     public void playGame(){
+        correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
         Scanner getNum = new Scanner(System.in);
         int numLoop = 1;
         int userNumInt;
