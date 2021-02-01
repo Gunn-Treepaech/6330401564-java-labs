@@ -15,10 +15,10 @@ package treeechan.treepaech.lab5;
 import java.util.Scanner;
 
 public class GuessNumberGameVer1 {
-    private int minNum = 1;
-    private int maxNum = 10;
-    private int maxTries = 3;
-    private static int numOfGames = 0;
+    protected int minNum = 1;
+    protected int maxNum = 10;
+    protected int maxTries = 3;
+    protected static int numOfGames = 0;
 
     @Override // Change according to the calling object
     public String toString() {

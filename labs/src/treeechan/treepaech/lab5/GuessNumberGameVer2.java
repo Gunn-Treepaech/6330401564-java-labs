@@ -53,25 +53,25 @@ class GuessNumberGameVer2 extends GuessNumberGameVer1{
     public void playGame(){
         int numLoop = 1;
         int userNumInt;
-        int correctNum = super.getMinNum() + (int) (Math.random() * ((super.getMaxNum() - super.getMinNum()) + 1));
+        int correctNum = minNum + (int) (Math.random() * (maxNum - minNum + 1));
         Scanner getNum = new Scanner(System.in);
         String userNum;
-        while (numLoop <= super.getMaxTries()){
-            System.out.print("Please enter a guess (" + super.getMinNum() + "-" + super.getMaxNum() + "):");
+        while (numLoop <= maxTries){
+            System.out.print("Please enter a guess (" + minNum + "-" + maxNum + "):");
             userNum = getNum.nextLine();
             userNumInt = Integer.parseInt(userNum);
             collectNumbers(userNumInt);
-            if (userNumInt < super.getMinNum() || userNumInt > super.getMaxNum()){
-                System.out.println("The guess number must be in the range " + super.getMinNum() + " and " + super.getMaxNum());
+            if (userNumInt < minNum || userNumInt > maxNum){
+                System.out.println("The guess number must be in the range " + minNum + " and " + maxNum);
                 // Enter numbers out of range
             } else {
                 collectNumbers(userNumInt);
                 if (userNumInt != correctNum){
                     if (userNumInt > correctNum){
-                        System.out.println("Please type a Lower number! Number of remaining tries:" + (super.getMaxTries() - numLoop));
+                        System.out.println("Please type a Lower number! Number of remaining tries:" + (maxTries - numLoop));
                         // If  user numbers are less than random numbers
                     } else {
-                        System.out.println("Please type a higher number! Number of remaining tries:" + (super.getMaxTries() - numLoop));
+                        System.out.println("Please type a higher number! Number of remaining tries:" + (maxTries - numLoop));
                         // If  user numbers are greater than random numbers
                     }
                     numLoop++; // Increase the value of numLoop by 1
