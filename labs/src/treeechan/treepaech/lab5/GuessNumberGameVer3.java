@@ -21,7 +21,6 @@ class GuessNumberGameVer3 extends GuessNumberGameVer2 {
     public void playGame() {
         super.playGame();
     }
-
     public GuessNumberGameVer3(){
         super();     // Send variable to GuessNumberGameVer2
         guesses = new int[MAX_GUESSES];  // Set the size of the array
@@ -69,7 +68,7 @@ class GuessNumberGameVer3 extends GuessNumberGameVer2 {
         }
         return copyArray;
     }
-    public  void guessMin(){
+    public void guessMin(){
         int[] copyArray;
         copyArray = sortNumbers();
         System.out.println("Min = " + copyArray[numGuesses - 1]); // Show maximum guessed value
