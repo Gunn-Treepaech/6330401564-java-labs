@@ -1,3 +1,17 @@
+/**
+ * This GuessNumberGameVer3 class
+ *It is a class with the same properties as class GuessNumberGameVer2
+ * Then the class itself has the ability to collect guessed numbers,
+ * ask to play again, show all guessed numbers, show some.
+ * show MaxNumberOfGuess, show MinNumberOfGuess, show Average
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:January 30, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab5;
 
 import java.util.Scanner;
