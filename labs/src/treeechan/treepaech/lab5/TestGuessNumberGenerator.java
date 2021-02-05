@@ -15,7 +15,8 @@ public class TestGuessNumberGenerator {
     public static void main(String[] args) {
       //  testConstructors();
         // testSetterGetterMethods();
-        testPlayGame();
+        //testPlayGame();
+        tesPlayGame2();
     }
     public static void testConstructors(){
         GuessNumberGameVer1 gng1 = new GuessNumberGameVer1();
@@ -48,6 +49,10 @@ public class TestGuessNumberGenerator {
     }
     public static void testPlayGame(){
         GuessNumberGameVer2 gng = new GuessNumberGameVer2(5, 10, 4);
+        gng.playGame();
+    }
+    public static void tesPlayGame2(){
+        GuessNumberGameVer3 gng = new GuessNumberGameVer3(5, 10, 4);
         gng.playGame();
     }
 }
