@@ -58,12 +58,14 @@ class GuessNumberGameVer3 extends GuessNumberGameVer2 {
     public  int[] sortNumbers(){
         int depositMin;
         int[] copyArray;
-        copyArray = guesses;
-        for (int i = 0; i < numGuesses; i++){
-            if (copyArray[i] < copyArray[i + 1]){
-                depositMin = copyArray[i];
-                copyArray[i] = copyArray[i + 1];    // Sort the numbers in the array.
-                copyArray[i + 1] = depositMin;
+        copyArray = guesses.clone();
+        for (int j = 0; j < numGuesses; j++) {
+            for (int i = 0; i < numGuesses; i++) {
+                if (copyArray[i] < copyArray[i + 1]) {
+                    depositMin = copyArray[i];
+                    copyArray[i] = copyArray[i + 1];    // Sort the numbers in the array.
+                    copyArray[i + 1] = depositMin;
+                }
             }
         }
         return copyArray;

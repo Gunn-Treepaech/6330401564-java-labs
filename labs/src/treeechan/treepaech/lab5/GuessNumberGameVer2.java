@@ -65,7 +65,6 @@ class GuessNumberGameVer2 extends GuessNumberGameVer1{
                 System.out.println("The guess number must be in the range " + minNum + " and " + maxNum);
                 // Enter numbers out of range
             } else {
-                collectNumbers(userNumInt);
                 if (userNumInt != correctNum){
                     if (userNumInt > correctNum){
                         System.out.println("Please type a Lower number! Number of remaining tries:" + (maxTries - numLoop));
