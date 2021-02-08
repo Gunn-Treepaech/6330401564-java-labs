@@ -13,10 +13,10 @@ package treeechan.treepaech.lab5;
 
 public class TestGuessNumberGenerator {
     public static void main(String[] args) {
-      //  testConstructors();
-        // testSetterGetterMethods();
-        //testPlayGame();
-        tesPlayGame2();
+        //testConstructors();
+         //testSetterGetterMethods();
+        testPlayGame();
+        //tesPlayGame2();
     }
     public static void testConstructors(){
         GuessNumberGameVer1 gng1 = new GuessNumberGameVer1();

@@ -39,7 +39,9 @@ class GuessNumberGameVer2 extends GuessNumberGameVer1{
         System.out.println("Type 'a' to see all your guesses or 'g' to see a guess on a specific play.");
         confirmTXT = txt.nextLine();
         switch (confirmTXT){
-            case "y" : playGame(); // Play again
+            case "y" : numGuesses = 0;
+                       guesses = new int[MAX_GUESSES];
+                       playGame(); // Play again
                 break;
             case "q" : System.exit(0);  // Exit the program
                 break;
@@ -56,6 +58,7 @@ class GuessNumberGameVer2 extends GuessNumberGameVer1{
         int userNumInt;
         Scanner getNum = new Scanner(System.in);
         String userNum;
+        System.out.println(correctNum);
         while (numLoop <= maxTries){
             System.out.print("Please enter a guess (" + minNum + "-" + maxNum + "):");
             userNum = getNum.nextLine();

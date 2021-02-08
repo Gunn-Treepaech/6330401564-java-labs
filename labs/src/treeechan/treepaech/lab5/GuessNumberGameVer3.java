@@ -92,7 +92,9 @@ class GuessNumberGameVer3 extends GuessNumberGameVer2 {
         System.out.println("Type 'v' to see average or 'm' to see minimum or 'x‘ to see maximum of all. your guesses");
         confirmTXT = txt.nextLine();
         switch (confirmTXT){
-            case "y" : playGame(); // Play again
+            case "y" : numGuesses = 0;
+                       guesses = new int[MAX_GUESSES];
+                       playGame(); // Play again
                 break;
             case "q" : System.exit(0);  // Exit the program
                 break;
