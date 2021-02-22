@@ -11,8 +11,6 @@ class GuessNumberGame extends Game{
 
     @Override // Change according to the calling object
     public String toString() {
-        super.setGameName("GuessNumberGame");
-        super.setNumOfPlayer(1);
         return super.toString() + "Min is " + minNum + ", Max is " + maxNum
                 + ", Number of tries is " + maxTries;
     }
@@ -35,14 +33,20 @@ class GuessNumberGame extends Game{
         this.maxTries = maxTries;  // Change the maxTries variable
     }
     public GuessNumberGame(){
+        super.setGameName("GuessNumberGame");
+        super.setNumOfPlayer(1);
         numOfGames++;
     }
     public GuessNumberGame(int minNum, int maxNum){
+        super.setGameName("GuessNumberGame");
+        super.setNumOfPlayer(1);
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         numOfGames++;
     }
     public GuessNumberGame(int minNum, int maxNum, int maxTries){
+        super.setGameName("GuessNumberGame");
+        super.setNumOfPlayer(1);
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         this.maxTries = maxTries; // Change the maxTries variable

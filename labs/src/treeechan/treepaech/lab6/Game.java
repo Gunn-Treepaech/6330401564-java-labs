@@ -4,7 +4,8 @@ abstract class Game {
     protected String gameName;
     protected int numOfPlayer;
     public Game(){
-
+        this.gameName = "unknown game";
+        this.numOfPlayer = 0;
     }
     public Game(String gameName, int numOfPlayer){
         this.gameName = gameName;

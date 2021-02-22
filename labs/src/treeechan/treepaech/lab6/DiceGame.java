@@ -5,9 +5,13 @@ class DiceGame extends Game {
     protected String answer = "l";
 
     public DiceGame(){
+        super.setGameName("DiceGame");
+        super.setNumOfPlayer(1);
         genDiceRoll();
     }
     public DiceGame(String answer){
+        super.setGameName("DiceGame");
+        super.setNumOfPlayer(1);
         genDiceRoll();
         this.answer = answer;
     }
@@ -22,8 +26,6 @@ class DiceGame extends Game {
     }
     @Override
     public String toString() {
-        super.setGameName("DiceGame");
-        super.setNumOfPlayer(1);
         return super.toString() + "Dice Roll : "+ diceRoll +", Player's guess : " + answer;
     }
     public void genDiceRoll(){
