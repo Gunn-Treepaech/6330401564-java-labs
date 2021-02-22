@@ -38,7 +38,7 @@ class DiceGame extends Game {
     }
     @Override
     public String toString() {
-        return super.toString() + "Dice Roll : "+ diceRoll +", Player's guess : " + answer;
+        return super.toString() + "Dice Roll : " + diceRoll + ", Player's guess : " + answer;
     }
     public void genDiceRoll(){
         int minNum = 1;
