@@ -1,3 +1,15 @@
+/**
+ * This GuessNumberGame class
+ * This class is a class that will play guessing numbers 1-10 with only 3 chances to answer.
+ * Or the player will It determines the range of numbers to guess and the chance to guess.
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:February 22, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab6;
 
 import java.util.Scanner;

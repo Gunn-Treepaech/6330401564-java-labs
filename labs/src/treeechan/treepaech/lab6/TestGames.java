@@ -1,3 +1,15 @@
+/**
+ * This TestGames class
+ * It is a class that calls the classes GuessNumberGame and DiceGame in order to play the game
+ * or configure the game to play.
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:February 22, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab6;
 
 public class TestGames {
