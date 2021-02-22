@@ -55,7 +55,7 @@ class GuessNumberGame extends Game{
         numOfGames++;
     }
     public GuessNumberGame(int minNum, int maxNum, int maxTries){
-        super("GuessNumberGame ttt",13);
+        super("GuessNumberGame",1);
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         this.maxTries = maxTries; // Change the maxTries variable
