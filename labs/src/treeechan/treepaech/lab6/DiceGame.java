@@ -17,14 +17,12 @@ class DiceGame extends Game {
     protected String answer;
 
     public DiceGame(){
-        super.setGameName("DiceGame"); // set nameName to "DiceGame"
-        super.setNumOfPlayer(1);     // set numOfPlayer to 1
+        super("DiceGame",1);
         this.answer = "l";
         genDiceRoll();
     }
     public DiceGame(String answer){
-        super.setGameName("DiceGame");  // set nameName to "DiceGame"
-        super.setNumOfPlayer(1);     // set numOfPlayer to 1
+        super("DiceGame",1);
         genDiceRoll();
         this.answer = answer;
     }
@@ -48,9 +46,9 @@ class DiceGame extends Game {
         // Randomize numbers from 1 to 6.
     }
     public void playGame(){
-        if (diceRoll <= 3 && answer.equals("l")){
+        if (diceRoll <= 3 && answer.equalsIgnoreCase("l")){
             System.out.println("Congratulations You win."); // show when the players answered correctly.
-        } else if (diceRoll > 3 && answer.equals("h")) {
+        } else if (diceRoll > 3 && answer.equalsIgnoreCase("h")) {
             System.out.println("Congratulations You win.");  // show when the players answered correctly.
         } else {
             System.out.println("Sorry. You lose."); // shows when the players do not answer correctly.
