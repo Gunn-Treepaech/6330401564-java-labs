@@ -14,11 +14,12 @@ package treeechan.treepaech.lab6;
 
 class DiceGame extends Game {
     protected int diceRoll;
-    protected String answer = "l";
+    protected String answer;
 
     public DiceGame(){
         super.setGameName("DiceGame"); // set nameName to "DiceGame"
         super.setNumOfPlayer(1);     // set numOfPlayer to 1
+        this.answer = "l";
         genDiceRoll();
     }
     public DiceGame(String answer){
