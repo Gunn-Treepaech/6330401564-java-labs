@@ -1,7 +1,7 @@
 /**
  * This MonopolyGame class
- *This class is a class that allows the player to guess whether the dice score is either low or height.
- *Less than or equal to 3 will be low, but if number greater than 3 will be height.
+ * This is a class that sets the number of players and the amount of money for each player.
+ * This class will only draw the dice 2 times only.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
@@ -21,14 +21,14 @@ class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
     public MonopolyGame(){
         setGameName("Monopoly Game");
         setNumOfPlayer(2);
-        genCash();
-        rollDice();
+        genCash();  // Add money to the cash array
+        rollDice(); // Roll the dice
     }
     public MonopolyGame(int numOfPlayer){
         setGameName("Monopoly Game");
         setNumOfPlayer(numOfPlayer);
-        genCash();
-        rollDice();
+        genCash();  // Add money to the cash array
+        rollDice(); // Roll the dice
     }
     public void genCash(){
         cash = new int[numOfPlayer];
@@ -52,15 +52,14 @@ class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
     }
     @Override
     public void rollDice() {
-        int MAX_NUMBER_RANDOM = numOfDice;
-        int[] randomNum = new int[MAX_NUMBER_RANDOM];
+        int randomNum;
         int minNum = 1, maxNum = 6;
         int sumNumberOfRandom = 0;
-        for (int i = 0; i < MAX_NUMBER_RANDOM; i++){
-            randomNum[i] = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
-            sumNumberOfRandom += randomNum[i];
+        for (int i = 0; i < numOfDice; i++){
+            randomNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1)); // Randomize numbers from 1 to 6.
+            sumNumberOfRandom += randomNum; // Add a random number
         }
-        super.diceRoll = sumNumberOfRandom;
+        super.diceRoll = sumNumberOfRandom; // Change the value diceRoll
     }
     @Override
     public void playGame() {

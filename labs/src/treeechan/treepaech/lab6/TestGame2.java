@@ -1,7 +1,7 @@
 /**
  * This TestGame2 class
- *This class is a class that allows the player to guess whether the dice score is either low or height.
- *Less than or equal to 3 will be low, but if number greater than 3 will be height.
+ * It is a class that calls the classes HighLowGame and MonopolyGame in order to play the game
+ * or configure the game to play.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
