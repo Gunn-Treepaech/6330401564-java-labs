@@ -1,3 +1,15 @@
+/**
+ * This HighLowGame class
+ *This class is a class that allows the player to guess whether the dice score is either low or height.
+ *Less than or equal to 3 will be low, but if number greater than 3 will be height.
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:February 28, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab6;
 
 class HighLowGame extends DiceGame implements HasRule, UseDice  {
