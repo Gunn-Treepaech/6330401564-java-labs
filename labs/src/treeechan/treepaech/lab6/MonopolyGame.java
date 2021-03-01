@@ -37,7 +37,11 @@ class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
         }
     }
     public String getCash() {
-        return  Arrays.toString(cash);
+        String msg = cash[0] + " ";
+        for (int i = 1; i < numOfPlayer; i++){
+            msg += cash[i] + " ";
+        }
+        return msg;
     }
     public void setCash(int[] cash) {
         this.cash = cash;
