@@ -47,11 +47,11 @@ class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
         System.out.println("Setting up monopoly board");
     }
     @Override
-    public void gameRules() {
-
+    public String gameRules() {
+        return null;
     }
     @Override
-    public void rollDice() {
+    public int rollDice() {
         int randomNum;
         int minNum = 1, maxNum = 6;
         int sumNumberOfRandom = 0;
@@ -60,6 +60,7 @@ class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
             sumNumberOfRandom += randomNum; // Add a random number
         }
         super.diceRoll = sumNumberOfRandom; // Change the value diceRoll
+        return diceRoll;
     }
     @Override
     public void playGame() {

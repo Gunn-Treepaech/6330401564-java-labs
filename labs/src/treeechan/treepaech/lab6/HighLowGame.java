@@ -41,11 +41,11 @@ class HighLowGame extends DiceGame implements HasRule, UseDice  {
         return numOfDice;
     }
     @Override
-    public void gameRules() {
-
+    public String gameRules() {
+        return null;
     }
     @Override
-    public void rollDice() {
+    public int rollDice() {
         int randomNum;
         int minNum = 1, maxNum = 6;
         int sumNumberOfRandom = 0;
@@ -54,6 +54,7 @@ class HighLowGame extends DiceGame implements HasRule, UseDice  {
             sumNumberOfRandom += randomNum; // Add a random number
         }
         super.diceRoll = sumNumberOfRandom; // Change the value diceRoll
+        return diceRoll;
     }
     @Override
     public void playGame() {
