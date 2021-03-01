@@ -19,14 +19,14 @@ class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
     protected final int numOfDice = 2;
 
     public MonopolyGame(){
-        setGameName("Monopoly Game");
-        setNumOfPlayer(2);
+        this.setGameName("Monopoly Game");
+        this.setNumOfPlayer(2);
         genCash();  // Add money to the cash array
         rollDice(); // Roll the dice
     }
     public MonopolyGame(int numOfPlayer){
-        setGameName("Monopoly Game");
-        setNumOfPlayer(numOfPlayer);
+        this.setGameName("Monopoly Game");
+        this.setNumOfPlayer(2);
         genCash();  // Add money to the cash array
         rollDice(); // Roll the dice
     }

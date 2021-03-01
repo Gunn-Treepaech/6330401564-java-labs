@@ -16,21 +16,21 @@ class HighLowGame extends DiceGame implements HasRule, UseDice  {
     protected int numOfDice;
 
     public HighLowGame(){
-        setGameName( "High-Low Game");
-        setNumOfPlayer(1);
+        this.setGameName( "High-Low Game");
+        this.setNumOfPlayer(1);
         this.numOfDice = 3;
         rollDice(); // Roll the dice
     }
     public HighLowGame(int numOfDice){
-        setGameName( "High-Low Game");
-        setNumOfPlayer(1);
+        this.setGameName( "High-Low Game");
+        this.setNumOfPlayer(1);
         this.numOfDice = numOfDice;
         rollDice(); // Roll the dice
     }
     public HighLowGame(int numOfDice , String answer){
         super(answer);
-        setGameName( "High-Low Game");
-        setNumOfPlayer(1);
+        this.setGameName( "High-Low Game");
+        this.setNumOfPlayer(1);
         this.numOfDice = numOfDice;
         rollDice(); // Roll the dice
     }

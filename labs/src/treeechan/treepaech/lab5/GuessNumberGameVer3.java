@@ -16,7 +16,7 @@ package treeechan.treepaech.lab5;
 
 import java.util.Scanner;
 
-class GuessNumberGameVer3 extends GuessNumberGameVer2 {
+public class GuessNumberGameVer3 extends GuessNumberGameVer2 {
     @Override
     public void playGame() {
         super.playGame();
