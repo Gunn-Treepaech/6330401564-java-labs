@@ -33,7 +33,18 @@ public class GuessNumberGameVer4 extends GuessNumberGameVer3 {
         }
     }
 
+    public static void testComparingSortByMaxTriesThenRandomRange(){
+        initGamesList();
+        Collections.sort(games, new SortByMaxTriesThenRandomRange());
+
+        System.out.println("\nSorted by max tries in descending oder");
+        for (GuessNumberGameVer3 game : games){
+            System.out.println(game);
+        }
+    }
+
     public static void main(String[] args) {
-        testComparingMaxTries();
+        //testComparingMaxTries();
+        testComparingSortByMaxTriesThenRandomRange();
     }
 }
