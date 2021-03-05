@@ -14,7 +14,7 @@ package treeechan.treepaech.lab6;
 
 import java.util.Arrays;
 
-class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
+public class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule { ;
     protected int[] cash;
     protected final int numOfDice = 2;
 

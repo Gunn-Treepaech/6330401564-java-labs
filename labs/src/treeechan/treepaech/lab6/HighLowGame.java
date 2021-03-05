@@ -12,7 +12,7 @@
 
 package treeechan.treepaech.lab6;
 
-class HighLowGame extends DiceGame implements HasRule, UseDice  {
+public class HighLowGame extends DiceGame implements HasRule, UseDice  {
     protected int numOfDice;
 
     public HighLowGame(){

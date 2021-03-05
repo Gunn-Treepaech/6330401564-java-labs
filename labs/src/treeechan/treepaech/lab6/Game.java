@@ -12,7 +12,7 @@
 
 package treeechan.treepaech.lab6;
 
-abstract class Game {
+public abstract class Game {
     protected String gameName;
     protected int numOfPlayer;
     public Game(){
@@ -41,5 +41,5 @@ abstract class Game {
         msg = "Game Name : " + gameName + ", Number of player : " + numOfPlayer + ", ";
         return msg;
     }
-    abstract void playGame();
+    public abstract void playGame();
 }

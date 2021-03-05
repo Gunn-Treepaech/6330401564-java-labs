@@ -12,7 +12,7 @@
 
 package treeechan.treepaech.lab6;
 
-class DiceGame extends Game {
+public class DiceGame extends Game {
     protected int diceRoll;
     protected String answer;
 

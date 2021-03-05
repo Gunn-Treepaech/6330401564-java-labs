@@ -1,5 +1,5 @@
 package treeechan.treepaech.lab6;
 
-interface UseDice {
+public interface UseDice {
     public int rollDice();
 }

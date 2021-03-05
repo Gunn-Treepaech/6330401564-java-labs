@@ -14,7 +14,7 @@ package treeechan.treepaech.lab6;
 
 import java.util.Scanner;
 
-class GuessNumberGame extends Game{
+public class GuessNumberGame extends Game{
     protected int minNum = 1;
     protected int maxNum = 10;
     protected int maxTries = 3;
