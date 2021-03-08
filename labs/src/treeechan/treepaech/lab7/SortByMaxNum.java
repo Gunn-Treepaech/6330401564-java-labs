@@ -16,6 +16,6 @@ import java.util.Comparator;
 class SortByMaxNum implements Comparator<GuessNumberGameVer3> {
     @Override
     public int compare(GuessNumberGameVer3 a, GuessNumberGameVer3 b){
-        return a.getMaxNum() - b.getMaxNum();
+        return (a.getMaxNum()-a.getMinNum()) - (b.getMaxNum() - b.getMinNum());
     }
 }

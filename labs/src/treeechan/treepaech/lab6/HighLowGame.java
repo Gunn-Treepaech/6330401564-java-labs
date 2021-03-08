@@ -52,6 +52,7 @@ public class HighLowGame extends DiceGame implements HasRule, UseDice  {
         for (int i = 0; i < numOfDice; i++){
             randomNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1)); // Randomize numbers from 1 to 6.
             sumNumberOfRandom += randomNum; // Add a random number
+            //System.out.println("Game HL - "+ randomNum + " : " + i);
         }
         super.diceRoll = sumNumberOfRandom; // Change the value diceRoll
         return diceRoll;

@@ -62,6 +62,7 @@ public class MonopolyGame extends DiceGame implements UseDice, UseBoard, HasRule
         for (int i = 0; i < numOfDice; i++){
             randomNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1)); // Randomize numbers from 1 to 6.
             sumNumberOfRandom += randomNum; // Add a random number
+          //  System.out.println("Game MN - "+ randomNum + " : " + i);
         }
         super.diceRoll = sumNumberOfRandom; // Change the value diceRoll
         return diceRoll;
