@@ -1,5 +1,6 @@
 /**
  * This SortByMaxTries class
+ * It is a class that takes the MaxTries of each game a player creates and compares.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

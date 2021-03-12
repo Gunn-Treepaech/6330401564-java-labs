@@ -1,5 +1,6 @@
 /**
  * This TestInterfaceAsType program
+ * It is a program that compares the random dice value of each game.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
@@ -27,12 +28,14 @@ public class TestInterfaceAsType {
 
     public static void main(String[] args) {
         ArrayList<DiceGame> games = new ArrayList<DiceGame>(0);
-        games.add(new HighLowGame()); //3
+        // Import an array
+        games.add(new HighLowGame());
         games.add(new HighLowGame(3));
         games.add(new HighLowGame(4, "h"));
-        games.add(new MonopolyGame()); //2
-        games.add(new MonopolyGame(3)); //2
+        games.add(new MonopolyGame());
+        games.add(new MonopolyGame(3));
 
+        // Compare from game 0 to game 4.
         for (int i = 0; i <= 3; i++){
             if (compareRollDice(games.get(i),games.get(i+1)) < 0){
                 System.out.printf("Game(%d):%s has dice roll less than Game(%d):%s\n"

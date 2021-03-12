@@ -25,6 +25,7 @@ public class GuessNumberGameVer4 extends GuessNumberGameVer3 {
     }
 
     public static void initGamesList(){
+        // Import an array
         games.add(new GuessNumberGameVer4(1,10,3));
         games.add(new GuessNumberGameVer4(1,10,5));
         games.add(new GuessNumberGameVer4(1,5,5));
@@ -37,7 +38,7 @@ public class GuessNumberGameVer4 extends GuessNumberGameVer3 {
 
     public static void testComparingMaxTries(){
         initGamesList();
-        Collections.sort(games, new SortByMaxTries());
+        Collections.sort(games, new SortByMaxTries()); // Sort MaxTries descending.
 
         System.out.println("\nSorted by max tries in descending oder");
         for (GuessNumberGameVer3 game : games){

@@ -1,5 +1,7 @@
 /**
- * This SortByMaxNum class
+ * This SortByRange class
+ * Is the class to use The range of random numbers
+ * for each game that the player generates for comparison.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

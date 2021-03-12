@@ -1,5 +1,7 @@
 /**
  * This TestGamesUsingPolymorphism program
+ * It's a program that takes player-created games into an array,
+ * then plays games and displays them.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 public class TestGamesUsingPolymorphism {
     public static void main(String[] args) {
         ArrayList<Game> objectList = new ArrayList<Game>(0);
+        // Import an array
         objectList.add(new DiceGame());
         objectList.add(new DiceGame("h"));
         objectList.add(new GuessNumberGame());

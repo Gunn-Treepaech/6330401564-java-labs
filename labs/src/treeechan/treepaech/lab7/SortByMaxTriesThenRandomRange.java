@@ -1,5 +1,7 @@
 /**
  * This SortByMaxTriesThenRandomRange class
+ * It is a class that takes MaxTries of each game that the player generates and compares,
+ * then compares the random range.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
@@ -17,12 +19,12 @@ class SortByMaxTriesThenRandomRange implements Comparator<GuessNumberGameVer3> {
     @Override
     public int compare(GuessNumberGameVer3 a, GuessNumberGameVer3 b){
         int maxTriesCompare = new SortByMaxTries().compare(a,b);
-        int maxNumCompare = new SortByRange().compare(a,b);
+        int rangeCompare = new SortByRange().compare(a,b);
 
-        if (maxNumCompare == 0){
-            return ((maxTriesCompare == 0) ? maxNumCompare : maxTriesCompare);
+        if (rangeCompare == 0){
+            return ((maxTriesCompare == 0) ? rangeCompare : maxTriesCompare);
         } else {
-            return maxNumCompare;
+            return rangeCompare;
         }
     }
 
