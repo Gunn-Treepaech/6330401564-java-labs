@@ -10,9 +10,7 @@ public class PlayerFormV1 extends MySimpleWindow{
     public PlayerFormV1(String titleName){
         super(titleName);
     }
-    public void setGridLayoutRow(int gridLayoutRow) {
-        this.gridLayoutRow = gridLayoutRow;
-    }
+
     @Override
     public void addComponents() {
         super.addComponents();
