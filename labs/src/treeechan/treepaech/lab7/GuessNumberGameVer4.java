@@ -1,5 +1,7 @@
 /**
  * This GuessNumberGameVer4 program
+ * It is a program that uses the MaxTries value and the range of random numbers
+ * to be sorted by bringing the game with a more winning chance first
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

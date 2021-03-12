@@ -15,10 +15,7 @@ import treeechan.treepaech.lab6.*;
 import java.util.ArrayList;
 
 public class TestInterfaceAsType {
-    static ArrayList<Integer> listRollDice = new ArrayList<Integer>(0);
     public static int compareRollDice(DiceGame a, DiceGame b){
-        listRollDice.add(a.getDiceRoll());
-        listRollDice.add(b.getDiceRoll());
         if (a.getDiceRoll() < b.getDiceRoll()){
             return -1;
         } else if (a.getDiceRoll() > b.getDiceRoll()){
