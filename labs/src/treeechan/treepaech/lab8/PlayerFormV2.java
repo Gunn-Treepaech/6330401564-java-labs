@@ -1,3 +1,13 @@
+/**
+ * This PlayerFormV2 program
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:March 14, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab8;
 
 import javax.swing.*;
@@ -31,7 +41,7 @@ public class PlayerFormV2 extends PlayerFormV1{
         noteText.append("entertainment or fun, and sometimes used as an educational tool.\n");
         panelPlayerFormV2.add(panelLabelAndTextField,BorderLayout.NORTH);
         panelNoteAndButton.add(noteText,BorderLayout.CENTER);
-        panelNoteAndButton.add(panelMain,BorderLayout.SOUTH);
+        panelNoteAndButton.add(panelMySimpleWindowMain,BorderLayout.SOUTH);
         panelPlayerFormV2.add(panelNoteAndButton,BorderLayout.SOUTH);
         setContentPane(panelPlayerFormV2);
     }

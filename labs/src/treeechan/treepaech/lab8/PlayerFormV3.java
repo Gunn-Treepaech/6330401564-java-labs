@@ -1,3 +1,13 @@
+/**
+ * This PlayerFormV2 program
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:March 14, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab8;
 
 import javax.swing.*;

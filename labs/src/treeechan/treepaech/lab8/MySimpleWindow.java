@@ -1,24 +1,33 @@
+/**
+ * This MySimpleWindow program
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:March 14, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab8;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class MySimpleWindow extends JFrame {
-    protected JPanel panelButton,panelMain;
+    protected JPanel panelButton,panelMySimpleWindowMain;
     protected JButton buttonA,buttonB;
 
     public MySimpleWindow(String titleName){
         super(titleName);
     }
     public void addComponents(){
-        panelMain = new JPanel();
+        panelMySimpleWindowMain = new JPanel();
         panelButton = new JPanel();
         buttonA = new JButton("Reset");
         buttonB = new JButton("Submit");
         panelButton.add(buttonA);
         panelButton.add(buttonB);
-        panelMain.add(panelButton);
-        setContentPane(panelMain);
+        panelMySimpleWindowMain.add(panelButton);
+        setContentPane(panelMySimpleWindowMain);
     }
     public void setFrameFeatures(){
         setSize(500, 200);

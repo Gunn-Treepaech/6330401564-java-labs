@@ -1,12 +1,22 @@
+/**
+ * This PlayerFormV1 program
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:March 14, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab8;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class PlayerFormV1 extends MySimpleWindow{
-    protected JPanel panelLabelAndTextField,panelMainPlayerFrom,panelJRadioButton;
+    protected JPanel panelLabelAndTextField,panelPlayerFromV1,panelRadioButton;
     protected int gridLayoutRow = 4;
-    protected int gridLayoutCol = 2;
+    final protected int gridLayoutCol = 2;
     public PlayerFormV1(String titleName){
         super(titleName);
     }
@@ -14,8 +24,8 @@ public class PlayerFormV1 extends MySimpleWindow{
     @Override
     public void addComponents() {
         super.addComponents();
-        panelMainPlayerFrom = new JPanel(new BorderLayout());
-        panelJRadioButton = new JPanel();
+        panelPlayerFromV1 = new JPanel(new BorderLayout());
+        panelRadioButton = new JPanel();
         panelLabelAndTextField = new JPanel();
         panelLabelAndTextField.setLayout(new GridLayout(gridLayoutRow,gridLayoutCol));
         JLabel labelA = new JLabel("Name:");
@@ -34,12 +44,12 @@ public class PlayerFormV1 extends MySimpleWindow{
         panelLabelAndTextField.add(labelD);
         JRadioButton itemA = new JRadioButton("Male");
         JRadioButton itemB = new JRadioButton("Female");
-        panelJRadioButton.add(itemA);
-        panelJRadioButton.add(itemB);
-        panelLabelAndTextField.add(panelJRadioButton);
-        panelMainPlayerFrom.add(panelLabelAndTextField,BorderLayout.CENTER);
-        panelMainPlayerFrom.add(panelMain,BorderLayout.SOUTH);
-        setContentPane(panelMainPlayerFrom);
+        panelRadioButton.add(itemA);
+        panelRadioButton.add(itemB);
+        panelLabelAndTextField.add(panelRadioButton);
+        panelPlayerFromV1.add(panelLabelAndTextField,BorderLayout.CENTER);
+        panelPlayerFromV1.add(panelMySimpleWindowMain,BorderLayout.SOUTH);
+        setContentPane(panelPlayerFromV1);
 
     }
 
