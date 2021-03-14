@@ -1,5 +1,6 @@
 /**
  * This MySimpleWindow program
+ * This program brings up a Windows, Window with two buttons is Reset and Submit.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

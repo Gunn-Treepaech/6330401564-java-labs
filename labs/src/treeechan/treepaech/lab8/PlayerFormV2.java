@@ -1,5 +1,7 @@
 /**
  * This PlayerFormV2 program
+ * This program will look similar to the program PlayerFormV1
+ * but it will be added, you will be able to select Player Type and below will have a note.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

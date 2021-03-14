@@ -1,5 +1,7 @@
 /**
- * This PlayerFormV2 program
+ * This PlayerFormV3 program
+ * This program is similar to the PlayerFormV2 program
+ * but will be added to the list of available games.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

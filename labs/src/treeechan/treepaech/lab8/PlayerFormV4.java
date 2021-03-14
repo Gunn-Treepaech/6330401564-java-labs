@@ -1,5 +1,8 @@
 /**
  * This PlayerFormV4 program
+ * This program is similar to the PlayerFormV3 program but is added to the menu.
+ * The menu consists of 2 categories: File has 4 options: New, Open, Save, Exit
+ * and Config has 2 options: Color, Size.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

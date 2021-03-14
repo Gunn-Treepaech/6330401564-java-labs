@@ -1,5 +1,8 @@
 /**
  * This PlayerFormV1 program
+ * The program will pop up a window with two buttons: Reset, Submit
+ * and there will be fields to fill in the following
+ * information: Name, Nationality, Date of Birth, then there will be a box to select the gender.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
