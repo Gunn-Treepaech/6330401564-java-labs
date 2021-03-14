@@ -18,8 +18,8 @@ import java.awt.*;
 public class PlayerFormV3 extends PlayerFormV2{
     protected JPanel panelPlayerFormV3;
 
-    public PlayerFormV3(String title){
-        super(title);
+    public PlayerFormV3(String titleName){
+        super(titleName);
         gridLayoutRow = 6;
     }
 
