@@ -32,6 +32,7 @@ public class MySimpleWindow extends JFrame {
     }
     public void setFrameFeatures(){
         setLocationRelativeTo(null);
+        setSize(500, 100);
         setVisible(true);
         pack();
         setDefaultCloseOperation(EXIT_ON_CLOSE);

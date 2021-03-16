@@ -4,20 +4,26 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SimpleForm extends JFrame {
-    JPanel buttonsPanel, namePanel, addrPanel;
-    public SimpleForm() {
-        super("642-28-5829");
+    protected JPanel buttonsPanel, namePanel, addrPanel, mainPanel;
+    protected JLabel nameLabel, addrLabel;
+    protected JTextField nameTxt;
+    protected JButton okButton, cancelButton;
+    protected JTextArea addrTxtArea;
+    protected JScrollPane addrScrollPane;
+
+    public SimpleForm(String title) {
+        super(title);
     }
 
     public void addComponents() {
-        JLabel nameLabel = new JLabel("Name:");
-        JTextField nameTxt = new JTextField("Kanda", 15);
-        JPanel mainPanel = (JPanel) this.getContentPane();
-        JButton okButton = new JButton("OK");
-        JButton cancelButton = new JButton("Cancel");
-        JLabel addrLabel = new JLabel("Address:");
-        JTextArea addrTxtArea = new JTextArea(4, 12);
-        JScrollPane addrScrollPane = new JScrollPane(addrTxtArea);
+        nameLabel = new JLabel("Name:");
+        nameTxt = new JTextField("Kanda", 15);
+        mainPanel = (JPanel) this.getContentPane();
+        okButton = new JButton("OK");
+        cancelButton = new JButton("Cancel");
+        addrLabel = new JLabel("Address:");
+        addrTxtArea = new JTextArea(4, 12);
+        addrScrollPane = new JScrollPane(addrTxtArea);
 
         mainPanel.setLayout(new BorderLayout());
 
@@ -52,11 +58,20 @@ public class SimpleForm extends JFrame {
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void createAndShowGUI() {
+        SimpleForm window = new SimpleForm("SimpleForm");
+        window.addComponents();
+        window.setFrameFeatures();
     }
 
     public static void main(String[] args) {
-        SimpleForm window = new SimpleForm();
-        window.addComponents();
-        window.setFrameFeatures();
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
     }
 }

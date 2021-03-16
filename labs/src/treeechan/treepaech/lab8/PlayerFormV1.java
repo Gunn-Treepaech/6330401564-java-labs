@@ -38,7 +38,7 @@ public class PlayerFormV1 extends MySimpleWindow{
         buttonGroup = new ButtonGroup();
         panelPlayerFromV1 = new JPanel(new BorderLayout());
         panelRadioButton = new JPanel();
-        panelLabelAndTextField = new JPanel(new GridBagLayout());
+        panelLabelAndTextField = new JPanel(new GridLayout(0, 2));
 
         JLabel labelA = new JLabel("Name:");
         JLabel labelB = new JLabel("Nationality:");
@@ -57,22 +57,22 @@ public class PlayerFormV1 extends MySimpleWindow{
         itemB.setSelected(true);
 
         panelLabelA.add(labelA);
-        panelLabelAndTextField.add(panelLabelA);
+        panelLabelAndTextField.add(labelA);
         panelTextFieldA.add(textFieldA);
         panelLabelAndTextField.add(panelTextFieldA);
        // panelLabelAndTextField.add(textFieldA);
         panelLabelB.add(labelB);
-        panelLabelAndTextField.add(panelLabelB);
+        panelLabelAndTextField.add(labelB);
         panelTextFieldB.add(textFieldB);
         panelLabelAndTextField.add(panelTextFieldB);
         //panelLabelAndTextField.add(textFieldB);
         panelLabelC.add(labelC);
-        panelLabelAndTextField.add(panelLabelC);
+        panelLabelAndTextField.add(labelC);
         panelTextFieldC.add(textFieldC);
         panelLabelAndTextField.add(panelTextFieldC);
        // panelLabelAndTextField.add(textFieldC);
         panelLabelD.add(labelD);
-        panelLabelAndTextField.add(panelLabelD);
+        panelLabelAndTextField.add(labelD);
 
         panelLabelAndTextField.add(panelRadioButton);
         panelLabelAndTextField.add(panelRadioButton);
