@@ -19,8 +19,12 @@ import java.awt.*;
 public class PlayerFormV1 extends MySimpleWindow{
     protected JPanel panelLabelAndTextField,panelPlayerFromV1,panelRadioButton;
     protected ButtonGroup buttonGroup;
-    protected JPanel panelTextFieldA, panelTextFieldB, panelTextFieldC;
-    protected JPanel panelLabelA, panelLabelB, panelLabelC, panelLabelD;
+    protected JPanel panelName, panelNationality, panelBirth;
+    protected JPanel panelLabelName, panelLabelNationality, panelLabelBirth, panelLabelGender;
+    protected JLabel labelName, labelNationality, labelBirth, labelGender;
+    protected JTextField name, nationality, birth;
+    protected JRadioButton radioButtonMale, radioButtonFemale;
+
     public PlayerFormV1(String titleName){
         super(titleName);
     }
@@ -28,51 +32,47 @@ public class PlayerFormV1 extends MySimpleWindow{
     @Override
     public void addComponents() {
         super.addComponents();
-        panelTextFieldA = new JPanel();
-        panelTextFieldB = new JPanel();
-        panelTextFieldC = new JPanel();
-        panelLabelA = new JPanel();
-        panelLabelB = new JPanel();
-        panelLabelC = new JPanel();
-        panelLabelD = new JPanel();
+        panelName = new JPanel();
+        panelNationality = new JPanel();
+        panelBirth = new JPanel();
+        panelLabelName = new JPanel();
+        panelLabelNationality = new JPanel();
+        panelLabelBirth = new JPanel();
+        panelLabelGender = new JPanel();
         buttonGroup = new ButtonGroup();
         panelPlayerFromV1 = new JPanel(new BorderLayout());
         panelRadioButton = new JPanel();
         panelLabelAndTextField = new JPanel(new GridLayout(0, 2));
+        labelName = new JLabel("Name:");
+        labelNationality = new JLabel("Nationality:");
+        labelBirth = new JLabel("Date of Birth (eg.,31-01-1990):");
+        labelGender = new JLabel("Gender:");
+        name = new JTextField(15);
+        nationality = new JTextField(15);
+        birth = new JTextField(15);
+        radioButtonMale = new JRadioButton("Male");
+        radioButtonFemale = new JRadioButton("Female");
 
-        JLabel labelA = new JLabel("Name:");
-        JLabel labelB = new JLabel("Nationality:");
-        JLabel labelC = new JLabel("Date of Birth (eg.,31-01-1990):");
-        JLabel labelD = new JLabel("Gender:");
-        JTextField textFieldA = new JTextField(15);
-        JTextField textFieldB = new JTextField(15);
-        JTextField textFieldC = new JTextField(15);
-        JRadioButton itemA = new JRadioButton("Male");
-        JRadioButton itemB = new JRadioButton("Female");
+        panelRadioButton.add(radioButtonMale);
+        panelRadioButton.add(radioButtonFemale);
+        buttonGroup.add(radioButtonMale);
+        buttonGroup.add(radioButtonFemale);
+        radioButtonFemale.setSelected(true);
 
-        panelRadioButton.add(itemA);
-        panelRadioButton.add(itemB);
-        buttonGroup.add(itemA);
-        buttonGroup.add(itemB);
-        itemB.setSelected(true);
-
-        panelLabelA.add(labelA);
-        panelLabelAndTextField.add(labelA);
-        panelTextFieldA.add(textFieldA);
-        panelLabelAndTextField.add(panelTextFieldA);
-       // panelLabelAndTextField.add(textFieldA);
-        panelLabelB.add(labelB);
-        panelLabelAndTextField.add(labelB);
-        panelTextFieldB.add(textFieldB);
-        panelLabelAndTextField.add(panelTextFieldB);
-        //panelLabelAndTextField.add(textFieldB);
-        panelLabelC.add(labelC);
-        panelLabelAndTextField.add(labelC);
-        panelTextFieldC.add(textFieldC);
-        panelLabelAndTextField.add(panelTextFieldC);
-       // panelLabelAndTextField.add(textFieldC);
-        panelLabelD.add(labelD);
-        panelLabelAndTextField.add(labelD);
+       // panelLabelName.add(labelName);
+        panelLabelAndTextField.add(labelName);
+        panelName.add(name);
+        panelLabelAndTextField.add(panelName);
+       // panelLabelNationality.add(labelNationality);
+        panelLabelAndTextField.add(labelNationality);
+        panelNationality.add(nationality);
+        panelLabelAndTextField.add(panelNationality);
+      //  panelLabelBirth.add(labelBirth);
+        panelLabelAndTextField.add(labelBirth);
+        panelBirth.add(birth);
+        panelLabelAndTextField.add(panelBirth);
+      //  panelLabelGender.add(labelGender);
+        panelLabelAndTextField.add(labelGender);
 
         panelLabelAndTextField.add(panelRadioButton);
         panelLabelAndTextField.add(panelRadioButton);

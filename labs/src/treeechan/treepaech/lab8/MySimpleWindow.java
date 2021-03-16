@@ -15,18 +15,19 @@ import javax.swing.*;
 
 public class MySimpleWindow extends JFrame {
     protected JPanel panelButton,panelMySimpleWindowMain;
-    protected JButton buttonA,buttonB;
+    protected JButton resetButton, submitButton;
 
     public MySimpleWindow(String titleName){
         super(titleName);
     }
+
     public void addComponents(){
         panelMySimpleWindowMain = new JPanel();
         panelButton = new JPanel();
-        buttonA = new JButton("Reset");
-        buttonB = new JButton("Submit");
-        panelButton.add(buttonA);
-        panelButton.add(buttonB);
+        resetButton = new JButton("Reset");
+        submitButton = new JButton("Submit");
+        panelButton.add(resetButton);
+        panelButton.add(submitButton);
         panelMySimpleWindowMain.add(panelButton);
         setContentPane(panelMySimpleWindowMain);
     }
