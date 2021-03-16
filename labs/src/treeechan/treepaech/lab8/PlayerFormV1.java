@@ -18,8 +18,9 @@ import java.awt.*;
 
 public class PlayerFormV1 extends MySimpleWindow{
     protected JPanel panelLabelAndTextField,panelPlayerFromV1,panelRadioButton;
-    protected int gridLayoutRow = 4;
-    final protected int gridLayoutCol = 2;
+    protected ButtonGroup buttonGroup;
+    protected JPanel panelTextFieldA, panelTextFieldB, panelTextFieldC;
+    protected JPanel panelLabelA, panelLabelB, panelLabelC, panelLabelD;
     public PlayerFormV1(String titleName){
         super(titleName);
     }
@@ -27,33 +28,57 @@ public class PlayerFormV1 extends MySimpleWindow{
     @Override
     public void addComponents() {
         super.addComponents();
+        panelTextFieldA = new JPanel();
+        panelTextFieldB = new JPanel();
+        panelTextFieldC = new JPanel();
+        panelLabelA = new JPanel();
+        panelLabelB = new JPanel();
+        panelLabelC = new JPanel();
+        panelLabelD = new JPanel();
+        buttonGroup = new ButtonGroup();
         panelPlayerFromV1 = new JPanel(new BorderLayout());
         panelRadioButton = new JPanel();
-        panelLabelAndTextField = new JPanel();
-        panelLabelAndTextField.setLayout(new GridLayout(gridLayoutRow,gridLayoutCol));
+        panelLabelAndTextField = new JPanel(new GridBagLayout());
+
         JLabel labelA = new JLabel("Name:");
-        panelLabelAndTextField.add(labelA);
-        JTextField textFieldA = new JTextField(15);
-        panelLabelAndTextField.add(textFieldA);
         JLabel labelB = new JLabel("Nationality:");
-        panelLabelAndTextField.add(labelB);
-        JTextField textFieldB = new JTextField(15);
-        panelLabelAndTextField.add(textFieldB);
         JLabel labelC = new JLabel("Date of Birth (eg.,31-01-1990):");
-        panelLabelAndTextField.add(labelC);
-        JTextField textFieldC = new JTextField(15);
-        panelLabelAndTextField.add(textFieldC);
         JLabel labelD = new JLabel("Gender:");
-        panelLabelAndTextField.add(labelD);
+        JTextField textFieldA = new JTextField(15);
+        JTextField textFieldB = new JTextField(15);
+        JTextField textFieldC = new JTextField(15);
         JRadioButton itemA = new JRadioButton("Male");
         JRadioButton itemB = new JRadioButton("Female");
+
         panelRadioButton.add(itemA);
         panelRadioButton.add(itemB);
+        buttonGroup.add(itemA);
+        buttonGroup.add(itemB);
+        itemB.setSelected(true);
+
+        panelLabelA.add(labelA);
+        panelLabelAndTextField.add(panelLabelA);
+        panelTextFieldA.add(textFieldA);
+        panelLabelAndTextField.add(panelTextFieldA);
+       // panelLabelAndTextField.add(textFieldA);
+        panelLabelB.add(labelB);
+        panelLabelAndTextField.add(panelLabelB);
+        panelTextFieldB.add(textFieldB);
+        panelLabelAndTextField.add(panelTextFieldB);
+        //panelLabelAndTextField.add(textFieldB);
+        panelLabelC.add(labelC);
+        panelLabelAndTextField.add(panelLabelC);
+        panelTextFieldC.add(textFieldC);
+        panelLabelAndTextField.add(panelTextFieldC);
+       // panelLabelAndTextField.add(textFieldC);
+        panelLabelD.add(labelD);
+        panelLabelAndTextField.add(panelLabelD);
+
+        panelLabelAndTextField.add(panelRadioButton);
         panelLabelAndTextField.add(panelRadioButton);
         panelPlayerFromV1.add(panelLabelAndTextField,BorderLayout.CENTER);
         panelPlayerFromV1.add(panelMySimpleWindowMain,BorderLayout.SOUTH);
         setContentPane(panelPlayerFromV1);
-
     }
 
     public static void createAndShowGUI() {

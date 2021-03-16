@@ -20,7 +20,6 @@ public class PlayerFormV3 extends PlayerFormV2{
 
     public PlayerFormV3(String titleName){
         super(titleName);
-        gridLayoutRow = 6;
     }
 
     @Override
@@ -29,13 +28,11 @@ public class PlayerFormV3 extends PlayerFormV2{
         panelPlayerFormV3 = new JPanel(new BorderLayout());
         JLabel labelGames = new JLabel("Games:");
         panelLabelAndTextField.add(labelGames);
-        JTextArea gameList = new JTextArea(3,15);
-        gameList.setLineWrap(true);
-        gameList.setWrapStyleWord(true);
-        gameList.setText("Guess Number Game\n");
-        gameList.append("High-Low Game\n");
-        gameList.append("Monopoly Game");
-        panelLabelAndTextField.add(gameList);
+        String[][] gameList = {{"Guess Number Game"}, {"High-Low Game"}, {"Monopoly Game"}};
+        String[] header = {"Column1"};
+        JTable gameListTable = new JTable(gameList, header);
+        gameListTable.setShowGrid(false);
+        panelLabelAndTextField.add(gameListTable);
         panelPlayerFormV3.add(panelLabelAndTextField, BorderLayout.CENTER);
         panelPlayerFormV3.add(panelNoteAndButton, BorderLayout.SOUTH);
         setContentPane(panelPlayerFormV3);

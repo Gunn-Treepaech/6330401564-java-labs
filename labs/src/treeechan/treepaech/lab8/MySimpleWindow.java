@@ -31,7 +31,6 @@ public class MySimpleWindow extends JFrame {
         setContentPane(panelMySimpleWindowMain);
     }
     public void setFrameFeatures(){
-        setSize(500, 200);
         setLocationRelativeTo(null);
         setVisible(true);
         pack();
