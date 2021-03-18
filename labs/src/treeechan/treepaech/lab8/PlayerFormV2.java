@@ -43,11 +43,12 @@ public class PlayerFormV2 extends PlayerFormV1{
         JLabel labelNote = new JLabel("Note:");
         panelNoteAndButton.add(labelNote,BorderLayout.NORTH);
         JTextArea noteText = new JTextArea(3,35);
+        JScrollPane scroll = new JScrollPane(noteText);
         noteText.setLineWrap(true);
         noteText.setWrapStyleWord(true);
         noteText.setText("A game is a structured form of play, usually undertaken for \n");
         noteText.append("entertainment or fun, and sometimes used as an educational tool.\n");
-        panelNote.add(noteText);
+        panelNote.add(scroll);
         panelPlayerFormV2.add(panelLabelAndTextField,BorderLayout.NORTH);
         panelNoteAndButton.add(panelNote,BorderLayout.CENTER);
         panelNoteAndButton.add(panelMySimpleWindowMain,BorderLayout.SOUTH);

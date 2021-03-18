@@ -39,7 +39,7 @@ public class SimpleForm extends JFrame {
         addrTxtArea.append("standard dummy text ever since the 1500s, when an unknown");
         addrTxtArea.append("printer took a galley of type and scrambled it to make a type");
         addrTxtArea.append("specimen book. It has survived not only five centuries");
-        addrPanel.add(addrLabel);
+   //     addrPanel.add(addrLabel);
         addrPanel.add(addrScrollPane);
 
         buttonsPanel = new JPanel();
