@@ -28,11 +28,9 @@ public class PlayerFormV3 extends PlayerFormV2{
         panelPlayerFormV3 = new JPanel(new BorderLayout());
         JLabel labelGames = new JLabel("Games:");
         panelLabelAndTextField.add(labelGames);
-        String[][] gameList = {{"Guess Number Game"}, {"High-Low Game"}, {"Monopoly Game"}};
-        String[] header = {"Column1"};
-        JTable gameListTable = new JTable(gameList, header);
-        gameListTable.setShowGrid(false);
-        panelLabelAndTextField.add(gameListTable);
+        String[] game = {"Guess Number Game", "High-Low Game", "Monopoly Game"};
+        JList<String> gameList = new JList<String>(game);
+        panelLabelAndTextField.add(gameList);
         panelPlayerFormV3.add(panelLabelAndTextField, BorderLayout.CENTER);
         panelPlayerFormV3.add(panelNoteAndButton, BorderLayout.SOUTH);
         setContentPane(panelPlayerFormV3);

@@ -35,10 +35,10 @@ public class PlayerFormV2 extends PlayerFormV1{
         JLabel labelType = new JLabel("Player Type:");
         panelLabelAndTextField.add(labelType);
         comboBox = new JComboBox<String>(selectedItem);
-        comboBox.setPreferredSize(new Dimension(170, 20));
+     //   comboBox.setPreferredSize(new Dimension(170, 20));
         comboBox.setSelectedItem(selectedItem[1]);
-        panelCombobox.add(comboBox);
-        panelLabelAndTextField.add(panelCombobox);
+      //  panelCombobox.add(comboBox);
+        panelLabelAndTextField.add(comboBox);
 
         JLabel labelNote = new JLabel("Note:");
         panelNoteAndButton.add(labelNote,BorderLayout.NORTH);
