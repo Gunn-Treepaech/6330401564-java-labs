@@ -16,22 +16,31 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PlayerFormV3 extends PlayerFormV2{
-    protected JPanel panelPlayerFormV3;
+    protected JPanel panelPlayerFormV3, panelListGame;
 
     public PlayerFormV3(String titleName){
         super(titleName);
     }
 
     @Override
+    public void initComponents() {
+        super.initComponents();
+        panelPlayerFormV3 = new JPanel(new BorderLayout());
+        panelListGame = new JPanel(new GridLayout(0,2));
+    }
+
+    @Override
     public void addComponents() {
         super.addComponents();
-        panelPlayerFormV3 = new JPanel(new BorderLayout());
+
         JLabel labelGames = new JLabel("Games:");
-        panelLabelAndTextField.add(labelGames);
         String[] game = {"Guess Number Game", "High-Low Game", "Monopoly Game"};
         JList<String> gameList = new JList<String>(game);
-        panelLabelAndTextField.add(gameList);
-        panelPlayerFormV3.add(panelLabelAndTextField, BorderLayout.CENTER);
+        panelListGame.add(labelGames);
+        panelListGame.add(gameList);
+
+        panelPlayerFormV3.add(panelContent, BorderLayout.NORTH);
+        panelPlayerFormV3.add(panelListGame, BorderLayout.CENTER);
         panelPlayerFormV3.add(panelNoteAndButton, BorderLayout.SOUTH);
         setContentPane(panelPlayerFormV3);
     }

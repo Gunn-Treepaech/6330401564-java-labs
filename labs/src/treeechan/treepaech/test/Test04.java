@@ -8,31 +8,32 @@ import java.awt.*;
 public class Test04 extends MySimpleWindow {
     protected JPanel panelFromV1, panelJRadioButton, panelContent;
     protected JPanel panelName, panelNationality, panelBirth, panelGander;
+    protected JPanel panelFrom, panelGender;
     protected JLabel labelName, labelNationality, labelBirth, labelGender;
     protected JTextField name, nationality, birth;
     protected JRadioButton male, female;
     protected ButtonGroup buttonGroup;
-    protected GridBagConstraints gbc = new GridBagConstraints();
 
     public Test04(String titleName) {
         super(titleName);
     }
+
     public void initComponents(){
         panelFromV1 = new JPanel(new BorderLayout());
         panelJRadioButton = new JPanel();
-        panelContent = new JPanel(new GridLayout(0,1));
+        panelFrom = new JPanel(new GridLayout(0, 2));
+        panelGander = new JPanel(new GridLayout(0, 2));
+        panelContent = new JPanel(new BorderLayout());
         panelName = new JPanel();
         panelNationality = new JPanel();
         panelBirth = new JPanel();
-        panelGander = new JPanel();
 
-        labelName = new JLabel("Name:                                            ");
-        labelName.setHorizontalAlignment(SwingConstants.LEFT);
-        labelNationality = new JLabel("Nationality:                                   ");
-        labelNationality.setHorizontalAlignment(SwingConstants.LEFT);
+        labelName = new JLabel("Name:");
+        labelName.setBounds(0,0,15,10);
+        labelNationality = new JLabel("Nationality:");
+        labelNationality.setBounds(0,1,15,10);
         labelBirth = new JLabel("Date of Birth (eg.,31-01-1990):");
-        labelBirth.setHorizontalAlignment(SwingConstants.LEFT);
-        labelGender = new JLabel("Gander:                                                      ");
+        labelGender = new JLabel("Gander:");
         name = new JTextField(15);
         nationality = new JTextField(15);
         birth = new JTextField(15);
@@ -50,21 +51,18 @@ public class Test04 extends MySimpleWindow {
         buttonGroup.add(male);
         buttonGroup.add(female);
 
-        panelName.add(labelName);
-        panelName.add(name);
-        panelContent.add(panelName);
-
-        panelNationality.add(labelNationality);
-        panelNationality.add(nationality);
-        panelContent.add(panelNationality);
-
-        panelBirth.add(labelBirth);
-        panelBirth.add(birth);
-        panelContent.add(panelBirth);
+        panelFrom.add(labelName);
+        panelFrom.add(name);
+        panelFrom.add(labelNationality);
+        panelFrom.add(nationality);
+        panelFrom.add(labelBirth);
+        panelFrom.add(birth);
 
         panelGander.add(labelGender);
         panelGander.add(panelJRadioButton);
-        panelContent.add(panelGander);
+
+        panelContent.add(panelFrom, BorderLayout.CENTER);
+        panelContent.add(panelGander, BorderLayout.SOUTH);
 
         panelFromV1.add(panelContent, BorderLayout.CENTER);
         panelFromV1.add(panelButton, BorderLayout.SOUTH);

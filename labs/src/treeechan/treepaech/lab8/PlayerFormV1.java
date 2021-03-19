@@ -17,69 +17,74 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PlayerFormV1 extends MySimpleWindow{
-    protected JPanel panelLabelAndTextField,panelPlayerFromV1,panelRadioButton;
-    protected ButtonGroup buttonGroup;
+    protected JPanel panelMainFromV1, panelJRadioButton, panelContent;
     protected JPanel panelName, panelNationality, panelBirth;
-    protected JPanel panelLabelName, panelLabelNationality, panelLabelBirth, panelLabelGender;
+    protected JPanel panelFrom, panelGender, panelSubContent;
     protected JLabel labelName, labelNationality, labelBirth, labelGender;
     protected JTextField name, nationality, birth;
-    protected JRadioButton radioButtonMale, radioButtonFemale;
+    protected JRadioButton male, female;
+    protected ButtonGroup buttonGroup;
 
     public PlayerFormV1(String titleName){
         super(titleName);
     }
 
-    @Override
-    public void addComponents() {
-        super.addComponents();
+    public void initComponents(){
+
+        panelMainFromV1 = new JPanel(new BorderLayout());
+        panelFrom = new JPanel(new GridLayout(0, 2));
+        panelGender = new JPanel(new GridLayout(0, 2));
+        panelContent = new JPanel(new BorderLayout());
+        panelSubContent = new JPanel(new GridLayout(0,1));
         panelName = new JPanel();
         panelNationality = new JPanel();
         panelBirth = new JPanel();
-        panelLabelName = new JPanel();
-        panelLabelNationality = new JPanel();
-        panelLabelBirth = new JPanel();
-        panelLabelGender = new JPanel();
-        buttonGroup = new ButtonGroup();
-        panelPlayerFromV1 = new JPanel(new BorderLayout());
-        panelRadioButton = new JPanel();
-        panelLabelAndTextField = new JPanel(new GridLayout(0, 2));
+        panelJRadioButton = new JPanel();
+
         labelName = new JLabel("Name:");
+        labelName.setBounds(0,0,15,10);
         labelNationality = new JLabel("Nationality:");
+        labelNationality.setBounds(0,1,15,10);
         labelBirth = new JLabel("Date of Birth (eg.,31-01-1990):");
-        labelGender = new JLabel("Gender:");
+        labelGender = new JLabel("Gander:");
         name = new JTextField(15);
         nationality = new JTextField(15);
         birth = new JTextField(15);
-        radioButtonMale = new JRadioButton("Male");
-        radioButtonFemale = new JRadioButton("Female");
+        male = new JRadioButton("Male");
+        female = new JRadioButton("Female");
+        buttonGroup = new ButtonGroup();
 
-        panelRadioButton.add(radioButtonMale);
-        panelRadioButton.add(radioButtonFemale);
-        buttonGroup.add(radioButtonMale);
-        buttonGroup.add(radioButtonFemale);
-        radioButtonFemale.setSelected(true);
-
-       // panelLabelName.add(labelName);
-        panelLabelAndTextField.add(labelName);
-        panelName.add(name);
-        panelLabelAndTextField.add(panelName);
-       // panelLabelNationality.add(labelNationality);
-        panelLabelAndTextField.add(labelNationality);
-        panelNationality.add(nationality);
-        panelLabelAndTextField.add(panelNationality);
-      //  panelLabelBirth.add(labelBirth);
-        panelLabelAndTextField.add(labelBirth);
-        panelBirth.add(birth);
-        panelLabelAndTextField.add(panelBirth);
-      //  panelLabelGender.add(labelGender);
-        panelLabelAndTextField.add(labelGender);
-
-        panelLabelAndTextField.add(panelRadioButton);
-        panelLabelAndTextField.add(panelRadioButton);
-        panelPlayerFromV1.add(panelLabelAndTextField,BorderLayout.CENTER);
-        panelPlayerFromV1.add(panelMySimpleWindowMain,BorderLayout.SOUTH);
-        setContentPane(panelPlayerFromV1);
     }
+    @Override
+    public void addComponents() {
+        super.addComponents();
+        initComponents();
+        panelJRadioButton.add(male);
+        panelJRadioButton.add(female);
+        buttonGroup.add(male);
+        buttonGroup.add(female);
+        female.setSelected(true);
+
+        panelFrom.add(labelName);
+        panelFrom.add(name);
+        panelFrom.add(labelNationality);
+        panelFrom.add(nationality);
+        panelFrom.add(labelBirth);
+        panelFrom.add(birth);
+
+        panelGender.add(labelGender);
+        panelGender.add(panelJRadioButton);
+
+        panelSubContent.add(panelGender);
+
+        panelContent.add(panelFrom, BorderLayout.CENTER);
+        panelContent.add(panelSubContent, BorderLayout.SOUTH);
+
+        panelMainFromV1.add(panelContent, BorderLayout.NORTH);
+        panelMainFromV1.add(panelButton, BorderLayout.SOUTH);
+        setContentPane(panelMainFromV1);
+    }
+
 
     public static void createAndShowGUI() {
         PlayerFormV1 msw = new PlayerFormV1("Player Form V1");
