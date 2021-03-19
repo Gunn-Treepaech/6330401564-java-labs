@@ -20,9 +20,36 @@ public class PlayerFormV4 extends PlayerFormV3{
     protected  JMenu menu, config, color, size;
     protected  JMenuBar menuBar;
     protected  JPanel panelPlayerFormV4;
+    protected  JMenuItem saveItem, openItem, newItem, exitItem;
+    protected  JMenuItem colorRed, colorGreen, colorBlue;
+    protected  JMenuItem size16, size20, size24;
 
     public PlayerFormV4(String titleName){
         super(titleName);
+    }
+
+    @Override
+    public void initComponents() {
+        super.initComponents();
+        panelPlayerFormV4 = new JPanel(new BorderLayout());
+        menuBar = new JMenuBar();  // Create a menu bar
+        menu = new JMenu("Menu");
+        config = new JMenu("Config");
+        newItem = new JMenuItem("New");
+        newItem.setIcon(new ImageIcon(getClass().getResource("new.png")));  // Set icon image
+        openItem = new JMenuItem("Open");
+        openItem.setIcon(new ImageIcon(getClass().getResource("open.png")));  // Set icon image
+        saveItem = new JMenuItem("Save");
+        saveItem.setIcon(new ImageIcon(getClass().getResource("save.png")));  // Set icon image
+        exitItem = new JMenuItem("Exit");
+        color = new JMenu("Color");
+        colorRed = new JMenuItem("Red");
+        colorBlue = new JMenuItem("Blue");
+        colorGreen = new JMenuItem("Green");
+        size = new JMenu("Size");
+        size16 = new JMenuItem("16");
+        size20 = new JMenuItem("20");
+        size24 = new JMenuItem("24");
     }
 
     @Override
@@ -32,38 +59,25 @@ public class PlayerFormV4 extends PlayerFormV3{
     }
 
     public void addMenu(){
-        panelPlayerFormV4 = new JPanel(new BorderLayout());
-        JMenuItem saveItem, openItem, newItem, exitItem;
-        JMenuItem colorRed, colorGreen, colorBlue;
-        JMenuItem size16, size20, size24;
-        menuBar = new JMenuBar();
-        menu = new JMenu("Menu");
-        config = new JMenu("Config");
-        newItem = new JMenuItem("New");
-        newItem.setIcon(new ImageIcon(getClass().getResource("new.png")));
-        openItem = new JMenuItem("Open");
-        openItem.setIcon(new ImageIcon(getClass().getResource("open.png")));
-        saveItem = new JMenuItem("Save");
-        saveItem.setIcon(new ImageIcon(getClass().getResource("save.png")));
-        exitItem = new JMenuItem("Exit");
-        menu.add(newItem); menu.add(openItem); menu.add(saveItem); menu.add(exitItem);
-        color = new JMenu("Color");
-        colorRed = new JMenuItem("Red");
-        colorBlue = new JMenuItem("Blue");
-        colorGreen = new JMenuItem("Green");
-        color.add(colorRed); color.add(colorGreen); color.add(colorBlue);
-        size = new JMenu("Size");
-        size16 = new JMenuItem("16");
-        size20 = new JMenuItem("20");
-        size24 = new JMenuItem("24");
-        size.add(size16); size.add(size20); size.add(size24);
+        menu.add(newItem);
+        menu.add(openItem);
+        menu.add(saveItem);
+        menu.addSeparator();
+        menu.add(exitItem);
+        color.add(colorRed);
+        color.add(colorGreen);
+        color.add(colorBlue);
+        size.add(size16);
+        size.add(size20);
+        size.add(size24);
         config.add(color);
         config.add(size);
         menuBar.add(menu);
         menuBar.add(config);
-        menuBar.setBackground(Color.yellow);
+       // menuBar.setBackground(Color.yellow);
         setJMenuBar(menuBar);
     }
+
     public static void createAndShowGUI() {
         PlayerFormV4 msw = new PlayerFormV4("Player Form V4");
         msw.addComponents();

@@ -16,10 +16,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PlayerFormV2 extends PlayerFormV1{
-    protected JPanel panelPlayerFormV2, panelNoteAndButton;
-    protected JPanel panelNote, panelCombobox;
-    protected JComboBox<String> comboBox;
+    protected  JPanel panelPlayerFormV2, panelNoteAndButton;
+    protected  JPanel panelNote, panelCombobox;
+    protected  JComboBox<String> comboBox;
     protected  String[] selectedItem = {"Beginner", "Amateur", "Professional"};
+    protected  JTextArea noteText;
+    protected  JScrollPane scroll;
+    protected JLabel labelType, labelNote;
 
     public PlayerFormV2(String titleName){
         super(titleName);
@@ -40,19 +43,19 @@ public class PlayerFormV2 extends PlayerFormV1{
     @Override
     public void addComponents() {
         super.addComponents();
-        JLabel labelType = new JLabel("Player Type:");
+        labelType = new JLabel("Player Type:");
         panelCombobox.add(labelType);
         panelCombobox.add(comboBox);
         panelSubContent.add(panelCombobox);
-        JLabel labelNote = new JLabel("Note:");
+        labelNote = new JLabel("Note:");
         panelNoteAndButton.add(labelNote,BorderLayout.NORTH);
-        JTextArea noteText = new JTextArea(3,35);
-        JScrollPane scroll = new JScrollPane(noteText);
+        noteText = new JTextArea(3,35);
+        scroll = new JScrollPane(noteText); //Create a scroll pane
         noteText.setLineWrap(true);
         noteText.setWrapStyleWord(true);
         noteText.setText("A game is a structured form of play, usually undertaken for \n");
         noteText.append("entertainment or fun, and sometimes used as an educational tool.\n");
-        panelNote.add(scroll);
+        panelNote.add(scroll);   // Add scroll pane to text area
 
         panelNoteAndButton.add(scroll, BorderLayout.CENTER);
         panelNoteAndButton.add(panelButton, BorderLayout.SOUTH);

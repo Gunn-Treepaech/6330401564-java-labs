@@ -17,6 +17,9 @@ import java.awt.*;
 
 public class PlayerFormV3 extends PlayerFormV2{
     protected JPanel panelPlayerFormV3, panelListGame;
+    protected JLabel labelGames;
+    protected JList<String> gameList;
+    protected String[] game = {"Guess Number Game", "High-Low Game", "Monopoly Game"};
 
     public PlayerFormV3(String titleName){
         super(titleName);
@@ -32,10 +35,8 @@ public class PlayerFormV3 extends PlayerFormV2{
     @Override
     public void addComponents() {
         super.addComponents();
-
-        JLabel labelGames = new JLabel("Games:");
-        String[] game = {"Guess Number Game", "High-Low Game", "Monopoly Game"};
-        JList<String> gameList = new JList<String>(game);
+        labelGames = new JLabel("Games:");
+        gameList = new JList<String>(game);
         panelListGame.add(labelGames);
         panelListGame.add(gameList);
 

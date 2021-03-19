@@ -30,7 +30,6 @@ public class PlayerFormV1 extends MySimpleWindow{
     }
 
     public void initComponents(){
-
         panelMainFromV1 = new JPanel(new BorderLayout());
         panelFrom = new JPanel(new GridLayout(0, 2));
         panelGender = new JPanel(new GridLayout(0, 2));
@@ -41,7 +40,7 @@ public class PlayerFormV1 extends MySimpleWindow{
         panelBirth = new JPanel();
         panelJRadioButton = new JPanel();
 
-        labelName = new JLabel("Name:");
+        labelName = new JLabel("Name:"); //Create a label that contains the word Name.
         labelName.setBounds(0,0,15,10);
         labelNationality = new JLabel("Nationality:");
         labelNationality.setBounds(0,1,15,10);
@@ -50,11 +49,12 @@ public class PlayerFormV1 extends MySimpleWindow{
         name = new JTextField(15);
         nationality = new JTextField(15);
         birth = new JTextField(15);
-        male = new JRadioButton("Male");
+        male = new JRadioButton("Male");  //Create a radiobutton name "Male"
         female = new JRadioButton("Female");
         buttonGroup = new ButtonGroup();
 
     }
+
     @Override
     public void addComponents() {
         super.addComponents();
@@ -63,7 +63,7 @@ public class PlayerFormV1 extends MySimpleWindow{
         panelJRadioButton.add(female);
         buttonGroup.add(male);
         buttonGroup.add(female);
-        female.setSelected(true);
+        female.setSelected(true);  // Makes it select female at the beginning.
 
         panelFrom.add(labelName);
         panelFrom.add(name);
@@ -84,7 +84,6 @@ public class PlayerFormV1 extends MySimpleWindow{
         panelMainFromV1.add(panelButton, BorderLayout.SOUTH);
         setContentPane(panelMainFromV1);
     }
-
 
     public static void createAndShowGUI() {
         PlayerFormV1 msw = new PlayerFormV1("Player Form V1");

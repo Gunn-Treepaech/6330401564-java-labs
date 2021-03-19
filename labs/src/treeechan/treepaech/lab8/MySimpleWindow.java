@@ -24,25 +24,27 @@ public class MySimpleWindow extends JFrame {
     public void addComponents(){
         panelMySimpleWindowMain = new JPanel();
         panelButton = new JPanel();
-        resetButton = new JButton("Reset");
+        resetButton = new JButton("Reset"); //Create a button name Reset
         submitButton = new JButton("Submit");
-        panelButton.add(resetButton);
-        panelButton.add(submitButton);
+        panelButton.add(resetButton);   // Add a button to panelButton
+        panelButton.add(submitButton);  // Add a button to panelButton
         panelMySimpleWindowMain.add(panelButton);
         setContentPane(panelMySimpleWindowMain);
     }
+
     public void setFrameFeatures(){
-        setLocationRelativeTo(null);
-        setSize(500, 500);
-        setVisible(true);
-        pack();
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // Puts it in the middle of the screen.
+        setVisible(true); // Make it visible.
+        pack();   // Making it visible.
+        setDefaultCloseOperation(EXIT_ON_CLOSE);  // Make the press exit will close the program.
     }
+
     public static void createAndShowGUI(){
         MySimpleWindow msw = new MySimpleWindow("MySimpleWindow");
         msw.addComponents();
         msw.setFrameFeatures();
     }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
