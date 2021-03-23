@@ -1,3 +1,13 @@
+/**
+ * This DiceImageCanvas
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:March 23, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab9;
 
 import javax.swing.*;
@@ -9,7 +19,7 @@ public class DiceImageCanvas extends JPanel {
     protected int diceNumber;
     protected Graphics2D g2d;
     protected Ellipse2D.Double circleCenter, circleTopRight, circleBottomLeft,
-            circleTopLeft, circleBottomRight, circleTopCenter, circleBottomCenter;
+            circleTopLeft, circleBottomRight, circleLeftCenter, circleRightCenter;
     protected Rectangle2D.Double square;
     protected int width = 150, height = 150;
     protected int canvasWidth = 400, canvasHeight = 400;
@@ -26,20 +36,20 @@ public class DiceImageCanvas extends JPanel {
 
     protected void createCircles() {
         // create red on all circles that will be placed on a rectangle
-        circleCenter = new Ellipse2D.Double(startSquareX + (margin * 6.5),
-                startSquareY + (margin * 6.5), circleWidth, circleHeight);
-        circleTopRight = new Ellipse2D.Double(startSquareX + (startSquareX - margin),
-                startSquareY + (margin), circleWidth, circleHeight);
-        circleBottomLeft = new Ellipse2D.Double(startSquareX + (margin),
-                startSquareY + (margin * 11), circleWidth, circleHeight);
-        circleTopLeft = new Ellipse2D.Double(startSquareX + (margin),
-                startSquareY + (margin), circleWidth, circleHeight);
-        circleBottomRight = new Ellipse2D.Double(startSquareX + (startSquareX - margin),
-                startSquareY + (margin * 11), circleWidth, circleHeight);
-        circleTopCenter = new Ellipse2D.Double(startSquareX + (margin * 6.5),
-                startSquareY + (margin), circleWidth, circleHeight);
-        circleBottomCenter = new Ellipse2D.Double(startSquareX + (margin * 6.5),
-                startSquareY + (margin * 11), circleWidth, circleHeight);
+        circleCenter = new Ellipse2D.Double((startSquareX + width / 2.0 ) - (circleWidth / 2.0),
+                (startSquareY + height / 2.0) - (circleHeight / 2.0), circleWidth, circleHeight);
+        circleTopRight = new Ellipse2D.Double((startSquareX + width) - (margin + circleWidth),
+                startSquareY + margin, circleWidth, circleHeight);
+        circleBottomLeft = new Ellipse2D.Double(startSquareX + margin,
+                (startSquareY + height) - (margin + circleHeight), circleWidth, circleHeight);
+        circleTopLeft = new Ellipse2D.Double(startSquareX + margin,
+                startSquareY + margin, circleWidth, circleHeight);
+        circleBottomRight = new Ellipse2D.Double((startSquareX + width) - (margin + circleWidth),
+                (startSquareY + height) - (margin + circleHeight), circleWidth, circleHeight);
+        circleLeftCenter = new Ellipse2D.Double(startSquareX + margin,
+                (startSquareY + height / 2.0) - (circleHeight / 2.0), circleWidth, circleHeight);
+        circleRightCenter = new Ellipse2D.Double((startSquareX + width) - (margin + circleWidth),
+                (startSquareY + height / 2.0) - (circleHeight / 2.0), circleWidth, circleHeight);
     }
 
     protected void drawDiceNumber() {
@@ -72,8 +82,8 @@ public class DiceImageCanvas extends JPanel {
                      g2d.fill(circleBottomLeft);
                      g2d.fill(circleTopLeft);
                      g2d.fill(circleBottomRight);
-                     g2d.fill(circleTopCenter);
-                     g2d.fill(circleBottomCenter);
+                     g2d.fill(circleLeftCenter);
+                     g2d.fill(circleRightCenter);
                      break;
         }
         g2d.setColor(Color.WHITE);

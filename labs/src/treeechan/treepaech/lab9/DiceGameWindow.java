@@ -1,11 +1,23 @@
+/**
+ * This DiceGameWindow program
+ *
+ * Author:Treepaech Treechan
+ * ID: 633040156-4
+ * Sec: 1
+ * Date:March 23, 2021
+ *
+ **/
+
 package treeechan.treepaech.lab9;
 
 import treeechan.treepaech.lab6.DiceGame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class DiceGameWindow extends JFrame {
+public class DiceGameWindow extends JFrame implements ActionListener {
     protected DiceImageCanvas diceImageCanvas;
     protected DiceGame diceGame;
     protected int diceRoll;
@@ -15,7 +27,7 @@ public class DiceGameWindow extends JFrame {
     public DiceGameWindow(String title) {
         super(title);
         diceGame = new DiceGame();
-        diceRoll = diceGame.getDiceRoll();
+        diceRoll = diceGame.getDiceRoll(); // Take out the random dice value.
         diceImageCanvas = new DiceImageCanvas(diceRoll);
     }
 
@@ -43,6 +55,7 @@ public class DiceGameWindow extends JFrame {
     public static void createAndShowGUI() {
         DiceGameWindow dgw = new DiceGameWindow("DiceGameWindow Version 1");
         dgw.addComponents();
+        dgw.addListener();
         dgw.setFrameFeatures();
     }
 
@@ -52,5 +65,31 @@ public class DiceGameWindow extends JFrame {
                 createAndShowGUI();
             }
         });
+    }
+
+    public void addListener(){
+        rollButton.addActionListener(this);
+        highButton.addActionListener(this);
+        lowButton.addActionListener(this);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == rollButton){
+            dispose();
+            SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    createAndShowGUI();
+                }
+            });
+        }
+        else if (e.getSource() == highButton){
+            diceGame.setAnswer("h");
+            diceGame.playGame();
+        }
+        else if (e.getSource() == lowButton){
+            diceGame.setAnswer("l");
+            diceGame.playGame();
+        }
+
     }
 }

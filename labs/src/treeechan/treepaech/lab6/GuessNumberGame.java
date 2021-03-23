@@ -44,15 +44,20 @@ public class GuessNumberGame extends Game{
     public void setMaxTries(int maxTries) {
         this.maxTries = maxTries;  // Change the maxTries variable
     }
+    public int getCorrectNum(){
+        return correctNum;
+    }
     public GuessNumberGame(){
         super("GuessNumberGame",1);
         numOfGames++;
+        genAnswer();
     }
     public GuessNumberGame(int minNum, int maxNum){
         super("GuessNumberGame",1);
         this.minNum = minNum; // Change the minNum variable
         this.maxNum = maxNum; // Change the maxNum variable
         numOfGames++;
+        genAnswer();
     }
     public GuessNumberGame(int minNum, int maxNum, int maxTries){
         super("GuessNumberGame",1);
@@ -60,12 +65,15 @@ public class GuessNumberGame extends Game{
         this.maxNum = maxNum; // Change the maxNum variable
         this.maxTries = maxTries; // Change the maxTries variable
         numOfGames++;
+        genAnswer();
     }
     public static int getNumOfGames(){
         return numOfGames; // Send back numOfGames
     }
-    public void playGame(){
+    public void genAnswer(){
         correctNum = minNum + (int) (Math.random() * ((maxNum - minNum) + 1));
+    }
+    public void playGame(){
         Scanner getNum = new Scanner(System.in);
         int numLoop = 1;
         int userNumInt;

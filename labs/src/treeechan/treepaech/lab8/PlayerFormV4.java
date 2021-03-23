@@ -36,11 +36,11 @@ public class PlayerFormV4 extends PlayerFormV3{
         menu = new JMenu("Menu");
         config = new JMenu("Config");
         newItem = new JMenuItem("New");
-        newItem.setIcon(new ImageIcon(getClass().getResource("new.png")));  // Set icon image
+        newItem.setIcon(new ImageIcon("images/new.png"));  // Set icon image
         openItem = new JMenuItem("Open");
-        openItem.setIcon(new ImageIcon(getClass().getResource("open.png")));  // Set icon image
+        openItem.setIcon(new ImageIcon("images/open.png"));  // Set icon image
         saveItem = new JMenuItem("Save");
-        saveItem.setIcon(new ImageIcon(getClass().getResource("save.png")));  // Set icon image
+        saveItem.setIcon(new ImageIcon("images/save.png"));  // Set icon image
         exitItem = new JMenuItem("Exit");
         color = new JMenu("Color");
         colorRed = new JMenuItem("Red");
