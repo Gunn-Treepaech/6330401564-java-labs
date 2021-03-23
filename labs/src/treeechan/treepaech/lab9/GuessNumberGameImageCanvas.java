@@ -1,5 +1,7 @@
 /**
- * This GuessNumberGameImageCanvas
+ * This GuessNumberGameImageCanvas class
+ * This class will design a program window by adding a number keypad from 1 to 10
+ * and the text above and below the window.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
@@ -18,10 +20,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GuessNumberGameImageCanvas extends JPanel implements ActionListener {
-    protected Font f = new Font("Serif",Font.BOLD, 24);
+    protected Font f = new Font("Serif",Font.BOLD, 24); // Set font, thickness, size
     protected GuessNumberGame guessNumberGame = new GuessNumberGame();
     protected JTextField result;
-    protected JPanel panelTop, panelBottom, panelCenter;
+    protected JPanel panelCenter;
     protected JButton number1, number2, number3, number4, number5, number6,
             number7, number8, number9, number10;
     protected GridBagConstraints gbc = new GridBagConstraints();
@@ -30,8 +32,6 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
 
     public void initComponents(){
         setLayout(new GridBagLayout());
-        panelTop = new JPanel();
-        panelBottom = new JPanel();
         panelCenter = new JPanel(new GridLayout(0,5));
         result = new JTextField(15);
         result.setEditable(false);
@@ -70,7 +70,7 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         JPanel  panelNumber8 = new JPanel();
         JPanel  panelNumber9 = new JPanel();
         JPanel  panelNumber10 = new JPanel();
-
+        // Add each keypad to its own panel.
         panelNumber1.add(number1);
         panelNumber2.add(number2);
         panelNumber3.add(number3);
@@ -81,7 +81,7 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         panelNumber8.add(number8);
         panelNumber9.add(number9);
         panelNumber10.add(number10);
-
+        // Add panel to the main panel.
         panelCenter.add(panelNumber1);
         panelCenter.add(panelNumber2);
         panelCenter.add(panelNumber3);
@@ -92,7 +92,7 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         panelCenter.add(panelNumber8);
         panelCenter.add(panelNumber9);
         panelCenter.add(panelNumber10);
-
+        // Add panel to frame to display.
         add(panelCenter);
         gbc.gridx = startX; gbc.gridy = startY + 50;
         add(result,gbc);
@@ -111,7 +111,7 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         g.drawString(msgTop, startX + (panelCenter.getWidth() / 3),
                 startY + (panelCenter.getHeight() / 14));
         g.drawString(msgBottom, startX + (panelCenter.getWidth() / 4),
-                getHeight() - (panelCenter.getHeight() / 5)); // getHeight() - 55
+                getHeight() - (panelCenter.getHeight() / 5));
     }
     public void addListener(){
         number1.addActionListener(this);
@@ -126,7 +126,6 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         number10.addActionListener(this);
     }
     public void playGame(){
-        correctNum = guessNumberGame.getCorrectNum();
         if (userAnswer == correctNum){
             result.setText("Congratulations!");
         } else {
@@ -135,6 +134,7 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+        correctNum = guessNumberGame.getCorrectNum();
         if (e.getSource() == number1){
            this.userAnswer = 1;
            playGame();

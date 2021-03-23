@@ -1,5 +1,6 @@
 /**
- * This DiceImageCanvas
+ * This DiceImageCanvas class
+ * It is a class that will draw the face of the dice that the program can randomly come.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

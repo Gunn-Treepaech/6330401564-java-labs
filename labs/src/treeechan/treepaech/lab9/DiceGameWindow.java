@@ -1,5 +1,7 @@
 /**
  * This DiceGameWindow program
+ * It is a program that will display the pages of the dice
+ * according to the number of dice that have been randomized
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
@@ -81,14 +83,13 @@ public class DiceGameWindow extends JFrame implements ActionListener {
                     createAndShowGUI();
                 }
             });
+            diceGame.playGame();
         }
         else if (e.getSource() == highButton){
             diceGame.setAnswer("h");
-            diceGame.playGame();
         }
         else if (e.getSource() == lowButton){
             diceGame.setAnswer("l");
-            diceGame.playGame();
         }
 
     }

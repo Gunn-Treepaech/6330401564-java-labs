@@ -1,5 +1,9 @@
 /**
  * This GuessNumberGameWindow program
+ * It is a program that will draw one random number from 1-10.
+ * The player can guess the number that the program randomly by pressing the number button t
+ * hat the player wants.
+ * The result for the player's answer will be displayed. In the text fields below.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
