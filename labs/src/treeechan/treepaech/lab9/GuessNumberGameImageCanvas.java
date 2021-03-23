@@ -104,8 +104,6 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         startY = (getHeight() / getHeight()) + 13;
         String msgTop = "Please guess by clicking at the number:";
         String msgBottom = "Result:";
-        System.out.println(getWidth());
-        System.out.println(getHeight());
         g.setFont(new Font("Serif", Font.BOLD, 20));
         g.setColor(Color.BLUE);
         g.drawString(msgTop, startX + (panelCenter.getWidth() / 3),
