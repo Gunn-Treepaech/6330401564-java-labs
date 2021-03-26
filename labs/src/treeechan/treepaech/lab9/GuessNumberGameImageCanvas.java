@@ -135,43 +135,34 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         correctNum = guessNumberGame.getCorrectNum();
         if (e.getSource() == number1){
            this.userAnswer = 1;
-           playGame();
         }
         else if (e.getSource() == number2){
             this.userAnswer = 2;
-            playGame();
         }
         else if (e.getSource() == number3){
             this.userAnswer = 3;
-            playGame();
         }
         else if (e.getSource() == number4){
             this.userAnswer = 4;
-            playGame();
         }
         else if (e.getSource() == number5){
             this.userAnswer = 5;
-            playGame();
         }
         else if (e.getSource() == number6){
             this.userAnswer = 6;
-            playGame();
         }
         else if (e.getSource() == number7){
             this.userAnswer = 7;
-            playGame();
         }
         else if (e.getSource() == number8){
             this.userAnswer = 8;
-            playGame();
         }
         else if (e.getSource() == number9){
             this.userAnswer = 9;
-            playGame();
         }
         else if (e.getSource() == number10){
             this.userAnswer = 10;
-            playGame();
         }
+        playGame();
     }
 }
