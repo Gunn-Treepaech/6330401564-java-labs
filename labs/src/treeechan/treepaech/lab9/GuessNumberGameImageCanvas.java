@@ -34,6 +34,7 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         setLayout(new GridBagLayout());
         panelCenter = new JPanel(new GridLayout(0,5));
         result = new JTextField(15);
+        result.setText("Congratulations!");
         result.setEditable(false);
         result.setFont(f);
         number1 = new JButton(new ImageIcon( "images/number1.png"));
@@ -132,7 +133,7 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        correctNum = guessNumberGame.getCorrectNum();
+     /*   correctNum = guessNumberGame.getCorrectNum();
         if (e.getSource() == number1){
            this.userAnswer = 1;
         }
@@ -163,6 +164,6 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         else if (e.getSource() == number10){
             this.userAnswer = 10;
         }
-        playGame();
+        playGame();*/
     }
 }
