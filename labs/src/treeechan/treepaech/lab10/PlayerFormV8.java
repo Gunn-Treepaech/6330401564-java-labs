@@ -19,16 +19,10 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 
 public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
-    protected JFileChooser fc;
+    protected JFileChooser fc = new JFileChooser();
 
     public PlayerFormV8(String titleName) {
         super(titleName);
-    }
-
-    @Override
-    public void initComponents() {
-        super.initComponents();
-        fc = new JFileChooser();
     }
 
     @Override
@@ -55,6 +49,7 @@ public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        super.actionPerformed(e);
         if (e.getSource() == exitItem){
             System.exit(0);
         } else if (e.getSource() == openItem){
