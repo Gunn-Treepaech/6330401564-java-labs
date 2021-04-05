@@ -29,6 +29,7 @@ public class PlayerFormV7 extends PlayerFormV6 implements ListSelectionListener 
 
     @Override
     public void addListener(){
+        super.addListener();
        gameList.addListSelectionListener(this);
     }
 

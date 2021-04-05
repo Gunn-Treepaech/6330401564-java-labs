@@ -33,6 +33,7 @@ public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
 
     @Override
     public void addListener() {
+        super.addListener();
         exitItem.setMnemonic(KeyEvent.VK_X);
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_DOWN_MASK));
         exitItem.addActionListener(this);

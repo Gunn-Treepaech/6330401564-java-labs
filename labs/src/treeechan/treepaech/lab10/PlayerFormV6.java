@@ -22,6 +22,7 @@ public class PlayerFormV6 extends PlayerFormV5 implements ItemListener {
 
     @Override
     public void addListener(){
+        super.addListener();
         male.addItemListener(this);
         female.addItemListener(this);
     }
