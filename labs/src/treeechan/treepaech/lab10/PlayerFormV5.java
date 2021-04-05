@@ -51,11 +51,6 @@ public class PlayerFormV5 extends PlayerFormV4 implements ActionListener {
         }
     }
 
-    public void handleRadioButton() {
-        String msg = "Gender is updated to " + buttonGroup.getSelection().getActionCommand();
-        JOptionPane.showMessageDialog(null, msg);
-    }
-
     public void handleComboBox() {
         String msg = comboBox.getName() + " is updated to " + comboBox.getSelectedItem();
         JOptionPane.showMessageDialog(null, msg);
