@@ -48,8 +48,6 @@ public class PlayerFormV5 extends PlayerFormV4 implements ActionListener {
             handleTextField(tf);
         } else if (src == comboBox){
             handleComboBox();
-        } else if (src instanceof JRadioButton){
-            handleRadioButton();
         }
     }
 
