@@ -35,8 +35,13 @@ public class PlayerFormV6 extends PlayerFormV5 implements ItemListener {
     public void itemStateChanged(ItemEvent e) {
         String msg = "";
         if (e.getStateChange() == ItemEvent.SELECTED){
-            msg = "Gender is updated to " + male.getActionCommand();
+            Object source = e.getSource();
+            if (source == male){
+                msg = "Gender is updated " + male.getActionCommand();
+            } else if (source == female){
+                msg = "Gender is updated " + female.getActionCommand();
+            }
+            JOptionPane.showMessageDialog(null, msg);
         }
-        JOptionPane.showMessageDialog(null, msg);
     }
 }
