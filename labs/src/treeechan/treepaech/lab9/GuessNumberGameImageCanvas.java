@@ -16,10 +16,8 @@ import treeechan.treepaech.lab6.GuessNumberGame;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class GuessNumberGameImageCanvas extends JPanel implements ActionListener {
+public class GuessNumberGameImageCanvas extends JPanel {
     protected Font f = new Font("Serif",Font.BOLD, 24); // Set font, thickness, size
     protected GuessNumberGame guessNumberGame = new GuessNumberGame();
     protected JTextField result;
@@ -34,7 +32,6 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         setLayout(new GridBagLayout());
         panelCenter = new JPanel(new GridLayout(0,5));
         result = new JTextField(15);
-        result.setText("Congratulations!");
         result.setEditable(false);
         result.setFont(f);
         number1 = new JButton(new ImageIcon( "images/number1.png"));
@@ -60,7 +57,6 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
     }
     public GuessNumberGameImageCanvas(){
         initComponents();
-        addListener();
         JPanel panelNumber1 = new JPanel();
         JPanel  panelNumber2 = new JPanel();
         JPanel  panelNumber3 = new JPanel();
@@ -112,58 +108,6 @@ public class GuessNumberGameImageCanvas extends JPanel implements ActionListener
         g.drawString(msgBottom, startX + (panelCenter.getWidth() / 4),
                 getHeight() - (panelCenter.getHeight() / 5));
     }
-    public void addListener(){
-        number1.addActionListener(this);
-        number2.addActionListener(this);
-        number3.addActionListener(this);
-        number4.addActionListener(this);
-        number5.addActionListener(this);
-        number6.addActionListener(this);
-        number7.addActionListener(this);
-        number8.addActionListener(this);
-        number9.addActionListener(this);
-        number10.addActionListener(this);
-    }
-    public void playGame(){
-        if (userAnswer == correctNum){
-            result.setText("Congratulations!");
-        } else {
-            result.setText("Sorry You Lose!");
-        }
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) {
-     /*   correctNum = guessNumberGame.getCorrectNum();
-        if (e.getSource() == number1){
-           this.userAnswer = 1;
-        }
-        else if (e.getSource() == number2){
-            this.userAnswer = 2;
-        }
-        else if (e.getSource() == number3){
-            this.userAnswer = 3;
-        }
-        else if (e.getSource() == number4){
-            this.userAnswer = 4;
-        }
-        else if (e.getSource() == number5){
-            this.userAnswer = 5;
-        }
-        else if (e.getSource() == number6){
-            this.userAnswer = 6;
-        }
-        else if (e.getSource() == number7){
-            this.userAnswer = 7;
-        }
-        else if (e.getSource() == number8){
-            this.userAnswer = 8;
-        }
-        else if (e.getSource() == number9){
-            this.userAnswer = 9;
-        }
-        else if (e.getSource() == number10){
-            this.userAnswer = 10;
-        }
-        playGame();*/
-    }
+
+
 }
