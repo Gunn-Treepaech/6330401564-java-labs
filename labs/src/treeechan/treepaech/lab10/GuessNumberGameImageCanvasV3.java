@@ -23,10 +23,11 @@ public class GuessNumberGameImageCanvasV3 extends GuessNumberGameImageCanvasV2 i
     @Override
     public void playGame() {
         super.playGame();
-        System.out.println(correctNum);
+        // Count the number of presses
         numPress++;
         if (userAnswer != correctNum){
             if (numPress == gameMaxTries){
+                // set button can not enabled
                 number1.setEnabled(false);
                 number2.setEnabled(false);
                 number3.setEnabled(false);

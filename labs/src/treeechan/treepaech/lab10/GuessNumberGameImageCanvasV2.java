@@ -22,6 +22,7 @@ public class GuessNumberGameImageCanvasV2 extends GuessNumberGameImageCanvas imp
         addListener();
     }
     public void addListener(){
+        // add listener
         number1.addActionListener(this);
         number2.addActionListener(this);
         number3.addActionListener(this);
@@ -36,6 +37,7 @@ public class GuessNumberGameImageCanvasV2 extends GuessNumberGameImageCanvas imp
 
     public void playGame(){
         if (userAnswer == correctNum){
+            // set button can not enabled
             number1.setEnabled(false);
             number2.setEnabled(false);
             number3.setEnabled(false);
@@ -70,6 +72,7 @@ public class GuessNumberGameImageCanvasV2 extends GuessNumberGameImageCanvas imp
     @Override
     public void actionPerformed(ActionEvent e) {
         correctNum = guessNumberGame.getCorrectNum();
+        // set user answer
         if (e.getSource() == number1){
            this.userAnswer = 1;
         }

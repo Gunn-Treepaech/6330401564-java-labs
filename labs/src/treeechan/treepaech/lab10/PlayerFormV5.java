@@ -32,15 +32,16 @@ public class PlayerFormV5 extends PlayerFormV4 implements ActionListener {
     @Override
     public void initComponents() {
         super.initComponents();
-        male.setActionCommand("male");
-        female.setActionCommand("female");
-        name.setName("Name");
-        nationality.setName("Nationality");
-        birth.setName("Birthdate");
-        comboBox.setName("Player type");
+        male.setActionCommand("male"); // set name is male
+        female.setActionCommand("female"); // set name is female
+        name.setName("Name");  // set name is Name
+        nationality.setName("Nationality"); // set name is Nationality
+        birth.setName("Birthdate");   // set name is Birthdate
+        comboBox.setName("Player type");   // set name is Name Player type
     }
 
     public void addListener(){
+        // add listener
         submitButton.addActionListener(this);
         resetButton.addActionListener(this);
         name.addActionListener(this);
@@ -69,30 +70,33 @@ public class PlayerFormV5 extends PlayerFormV4 implements ActionListener {
     }
 
     public void handleComboBox() {
+        // Show when there is a change
         String msg = comboBox.getName() + " is updated to " + comboBox.getSelectedItem();
         JOptionPane.showMessageDialog(null, msg);
     }
 
     public void handleTextField(JTextField tf) {
+        // Show when there is a change and press enter on the TextField.
        String msg = tf.getName() + " is updated to " + tf.getText().trim();
        JOptionPane.showMessageDialog(null, msg);
     }
 
     public void handleSubmitButton(){
-        resultBuffer.append(name.getText().trim());
+        resultBuffer.append(name.getText().trim()); // Pull text out of name
         resultBuffer.append(" has nationality as ");
-        resultBuffer.append(nationality.getText().trim());
+        resultBuffer.append(nationality.getText().trim()); // Pull text out of nationality
         resultBuffer.append(", birthdate as ");
-        resultBuffer.append(birth.getText().trim());
+        resultBuffer.append(birth.getText().trim()); // Pull text out of birth
         resultBuffer.append(", gender as ");
-        resultBuffer.append(buttonGroup.getSelection().getActionCommand());
+        resultBuffer.append(buttonGroup.getSelection().getActionCommand()); // Pull text out of RadioButton
         resultBuffer.append(", player type as ");
-        resultBuffer.append(comboBox.getSelectedItem());
+        resultBuffer.append(comboBox.getSelectedItem()); // Pull text out of selected item
 
         JOptionPane.showMessageDialog(null, resultBuffer.toString());
     }
 
     public void handleResetButton(){
+        // Empties all text field spaces
         name.setText("");
         nationality.setText("");
         birth.setText("");

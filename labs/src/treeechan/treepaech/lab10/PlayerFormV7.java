@@ -25,13 +25,14 @@ public class PlayerFormV7 extends PlayerFormV6 implements ListSelectionListener 
     @Override
     public void addComponents() {
         super.addComponents();
-        gameList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        gameList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION); // set JList to multiple mode
     }
 
     @Override
     public void addListener(){
+        // add listener
         super.addListener();
-       gameList.addListSelectionListener(this);
+        gameList.addListSelectionListener(this);
     }
 
     public static void createAndShowGUI() {
@@ -54,11 +55,13 @@ public class PlayerFormV7 extends PlayerFormV6 implements ListSelectionListener 
         StringBuffer msg = new StringBuffer();
         boolean isAdjusting = e.getValueIsAdjusting();
         if (!isAdjusting) {
-            ArrayList<String> selectedNames = (ArrayList<String>) gameList.getSelectedValuesList();
-            int numSelected = selectedNames.size();
+            // Pull the selection in array list
+            ArrayList<String> userSelected = (ArrayList<String>) gameList.getSelectedValuesList();
+            int numSelected = userSelected.size();
             for (int i = 0; i < numSelected; i++) {
-                    msg.append(selectedNames.get(i));
+                    msg.append(userSelected.get(i));
                     if(i != numSelected - 1){
+                        // If it is the last one, it will not put.
                         msg.append(", ");
                     }
             }

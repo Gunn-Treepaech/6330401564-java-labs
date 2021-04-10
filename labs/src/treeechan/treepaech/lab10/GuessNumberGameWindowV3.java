@@ -16,7 +16,6 @@ package treeechan.treepaech.lab10;
 import javax.swing.*;
 
 public class GuessNumberGameWindowV3 extends GuessNumberGameWindowV2{
-    protected static int gameStatusV3 = 0;
     protected static GuessNumberGameWindowV3 gngwv3;
 
     public GuessNumberGameWindowV3(String title) {
@@ -26,7 +25,7 @@ public class GuessNumberGameWindowV3 extends GuessNumberGameWindowV2{
     public static void createAndShowGUI() {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                if (gameStatus >= 1){
+                if (gameStatus == 1){
                     gngwv3.dispose();
                 }
                 gngwv3 = new GuessNumberGameWindowV3("GuessNumberGameWindow Version 3");

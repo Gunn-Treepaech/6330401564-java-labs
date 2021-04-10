@@ -23,13 +23,14 @@ public class GuessNumberGameWindowV2 extends GuessNumberGameWindow {
 
     public GuessNumberGameWindowV2(String title) {
         super(title);
-        gameStatus++;
+        // Counter whether played for the first time or not
+        gameStatus = 1;
     }
 
     public static void createAndShowGUI() {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                if (gameStatus >= 1){
+                if (gameStatus == 1){
                     gngwv2.dispose();
                 }
                 gngwv2 = new GuessNumberGameWindowV2("GuessNumberGameWindow Version 2");
