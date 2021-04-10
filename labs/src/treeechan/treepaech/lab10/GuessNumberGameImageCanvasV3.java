@@ -13,6 +13,7 @@
 
 package treeechan.treepaech.lab10;
 
+import javax.swing.*;
 import java.awt.event.ActionListener;
 
 public class GuessNumberGameImageCanvasV3 extends GuessNumberGameImageCanvasV2 implements ActionListener {
@@ -22,6 +23,7 @@ public class GuessNumberGameImageCanvasV3 extends GuessNumberGameImageCanvasV2 i
     @Override
     public void playGame() {
         super.playGame();
+        System.out.println(correctNum);
         numPress++;
         if (userAnswer != correctNum){
             if (numPress == gameMaxTries){
@@ -36,8 +38,20 @@ public class GuessNumberGameImageCanvasV3 extends GuessNumberGameImageCanvasV2 i
                 number9.setEnabled(false);
                 number10.setEnabled(false);
                 result.setText("No more tries");
+                playAgain();
             }
         }
+    }
 
+    @Override
+    public void playAgain(){
+        int userConfirm= JOptionPane.showConfirmDialog(null,
+                "Do you want to play the game again?", "Play Game Again ?", JOptionPane.YES_NO_OPTION);
+        // 0=yes, 1=no
+        if (userConfirm== 0){
+            GuessNumberGameWindowV3.createAndShowGUI();
+        } else if(userConfirm == 1){
+            System.exit(0);
+        }
     }
 }

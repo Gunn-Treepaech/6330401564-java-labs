@@ -13,6 +13,7 @@ package treeechan.treepaech.lab10;
 
 import treeechan.treepaech.lab9.GuessNumberGameImageCanvas;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -46,10 +47,23 @@ public class GuessNumberGameImageCanvasV2 extends GuessNumberGameImageCanvas imp
             number9.setEnabled(false);
             number10.setEnabled(false);
             result.setText("Congratulations!");
+            playAgain();
+
         } else if (userAnswer >= correctNum){
             result.setText("Lower");
         } else {
             result.setText("Higher");
+        }
+    }
+
+    public void playAgain(){
+        int userConfirm = JOptionPane.showConfirmDialog(null,
+                "Do you want to play the game again?", "Play Game Again ?", JOptionPane.YES_NO_OPTION);
+        // 0=yes, 1=no
+        if (userConfirm == 0){
+            GuessNumberGameWindowV2.createAndShowGUI();
+        } else if(userConfirm == 1){
+            System.exit(0);
         }
     }
 
