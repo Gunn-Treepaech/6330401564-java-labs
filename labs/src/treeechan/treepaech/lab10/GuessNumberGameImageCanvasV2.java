@@ -34,6 +34,16 @@ public class GuessNumberGameImageCanvasV2 extends GuessNumberGameImageCanvas imp
 
     public void playGame(){
         if (userAnswer == correctNum){
+            number1.setEnabled(false);
+            number2.setEnabled(false);
+            number3.setEnabled(false);
+            number4.setEnabled(false);
+            number5.setEnabled(false);
+            number6.setEnabled(false);
+            number7.setEnabled(false);
+            number8.setEnabled(false);
+            number9.setEnabled(false);
+            number10.setEnabled(false);
             result.setText("Congratulations!");
         } else if (userAnswer >= correctNum){
             result.setText("Lower");

@@ -20,19 +20,23 @@ public class GuessNumberGameImageCanvasV3 extends GuessNumberGameImageCanvasV2 i
     @Override
     public void playGame() {
         super.playGame();
+        System.out.println(correctNum);
         numPress++;
-        if (numPress == gameMaxTries){
-           number1.setEnabled(false);
-           number2.setEnabled(false);
-           number3.setEnabled(false);
-           number4.setEnabled(false);
-           number5.setEnabled(false);
-           number6.setEnabled(false);
-           number7.setEnabled(false);
-           number8.setEnabled(false);
-           number9.setEnabled(false);
-           number10.setEnabled(false);
-           result.setText("No more tries");
+        if (userAnswer != correctNum){
+            if (numPress == gameMaxTries){
+                number1.setEnabled(false);
+                number2.setEnabled(false);
+                number3.setEnabled(false);
+                number4.setEnabled(false);
+                number5.setEnabled(false);
+                number6.setEnabled(false);
+                number7.setEnabled(false);
+                number8.setEnabled(false);
+                number9.setEnabled(false);
+                number10.setEnabled(false);
+                result.setText("No more tries");
+            }
         }
+
     }
 }
