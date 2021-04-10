@@ -1,5 +1,7 @@
 /**
  * This GuessNumberGameImageCanvasV3 class
+ * It is a class, which is the same as GuessNumberGameImageCanvasV2,
+ * but will be added to the test of the maximum number of tries.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
@@ -20,7 +22,6 @@ public class GuessNumberGameImageCanvasV3 extends GuessNumberGameImageCanvasV2 i
     @Override
     public void playGame() {
         super.playGame();
-        System.out.println(correctNum);
         numPress++;
         if (userAnswer != correctNum){
             if (numPress == gameMaxTries){

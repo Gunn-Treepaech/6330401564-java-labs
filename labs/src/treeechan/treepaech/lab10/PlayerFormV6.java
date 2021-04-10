@@ -1,5 +1,6 @@
 /**
  * This PlayerFormV6 program
+ * when the user clicks any radio button, the program displays the message dialog showing the update.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

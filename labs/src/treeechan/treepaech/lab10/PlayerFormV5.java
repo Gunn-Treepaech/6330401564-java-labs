@@ -1,5 +1,12 @@
 /**
  * This PlayerFormV5 program
+ * When the user enters the top three text fields and clicks the Submit button
+ * then the program displays the message in the message dialog as shown
+ * "<name> has nationality as <nationality>, birthdate as <birt date>, gender as <gender>,
+ * player type as <player type>".
+ * When the user clicks the Reset button, the program resets the name, nationality, and date of birth text fields.
+ * When the user changes any text field (name, nationality, or date of birth) and click Enter
+ * the program displays the message dialog that that text field is updated.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

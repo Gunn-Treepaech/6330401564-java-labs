@@ -1,5 +1,6 @@
 /**
  * This GuessNumberGameImageCanvasV2 class
+ * It is a class which is the same as GuessNumberGameImageCanvasV1 but will be added to detect which button the player press
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

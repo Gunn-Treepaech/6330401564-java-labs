@@ -1,5 +1,6 @@
 /**
  * This PlayerFormV7 program
+ * when the user selects any game in the list, the program shows the selected game.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

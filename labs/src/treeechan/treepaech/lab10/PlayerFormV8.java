@@ -1,5 +1,16 @@
 /**
  * This PlayerFormV8 program
+ * When the user clicks the menu item Open, the program opens the open file dialog.
+ * If the user selects an existing file, the program shows the message dialog displaying
+ * the name of the file that is selected to open.
+ * If the user presses Cancel, the program should show the option message “Open command cancelled by user”.
+ * When the user clicks the menu item Save, the program opens the save  file dialog.
+ * If the user selects an existing file, the program shows the message dialog displaying the name of
+ * the file that is selected to open.
+ * If the user presses Cancel, the program should show the option message “Save command cancelled by user”
+ * When the user selects the menu Config > Color > {Red, Green, Blue}, the text color of the three text fields should be changed.
+ * When the user selects the menu Config > Size > {16, 20, 24)}, the text size of the text area should be changed to {16, 20, 24}.
+ *
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4

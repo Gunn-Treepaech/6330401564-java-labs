@@ -1,5 +1,8 @@
 /**
  * This GuessNumberGameImageCanvasV3 class
+ * The behavior of the game is that the user needs to keep guessing the number by clicking
+ * at the number buttons until the guessed number is the same as the answer number
+ * which is randomly generated in the range [1, 10] but the player will be enforced with the max number of tries.
  *
  * Author:Treepaech Treechan
  * ID: 633040156-4
