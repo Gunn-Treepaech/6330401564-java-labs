@@ -32,6 +32,7 @@ public class GuessNumberGameImageCanvas extends JPanel {
         setLayout(new GridBagLayout());
         panelCenter = new JPanel(new GridLayout(0,5));
         result = new JTextField(15);
+        result.setText("Congratulations!");
         result.setEditable(false);
         result.setFont(f);
         number1 = new JButton(new ImageIcon( "images/number1.png"));

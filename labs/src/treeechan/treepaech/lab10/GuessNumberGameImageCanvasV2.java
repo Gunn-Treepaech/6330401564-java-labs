@@ -20,6 +20,7 @@ import java.awt.event.ActionListener;
 public class GuessNumberGameImageCanvasV2 extends GuessNumberGameImageCanvas implements ActionListener {
     GuessNumberGameImageCanvasV2(){
         addListener();
+        result.setText("");
     }
     public void addListener(){
         // add listener
