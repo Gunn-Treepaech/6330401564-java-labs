@@ -26,6 +26,9 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -57,13 +60,12 @@ public class PlayerFormV9 extends PlayerFormV8 implements ActionListener {
             String msg = "You have not selected any game";
             JOptionPane.showMessageDialog(null, msg);
         } else {
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-            formatter.setLenient(false);
             try {
                 // Convert to form "dd-MM-yyyy".
-                Date parsedDate = formatter.parse(birth.getText());
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                LocalDate date = LocalDate.parse(birth.getText().trim(), formatter);
                 super.handleSubmitButton();
-            } catch (ParseException e) {
+            } catch (DateTimeException e) {
                 // If unable to convert.
                 String msg = "Please enter date in the format dd-MM-yyyy such as 31-02-2021";
                 JOptionPane.showMessageDialog(null, msg);
