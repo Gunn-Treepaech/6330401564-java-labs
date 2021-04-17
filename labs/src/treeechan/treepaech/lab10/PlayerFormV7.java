@@ -14,7 +14,7 @@ package treeechan.treepaech.lab10;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import java.util.ArrayList;
+import java.util.List;
 
 public class PlayerFormV7 extends PlayerFormV6 implements ListSelectionListener {
 
@@ -56,7 +56,7 @@ public class PlayerFormV7 extends PlayerFormV6 implements ListSelectionListener 
         boolean isAdjusting = e.getValueIsAdjusting();
         if (!isAdjusting) {
             // Pull the selection in array list
-            ArrayList<String> userSelected = (ArrayList<String>) gameList.getSelectedValuesList();
+            List<String> userSelected =  gameList.getSelectedValuesList();
             int numSelected = userSelected.size();
             for (int i = 0; i < numSelected; i++) {
                     msg.append(userSelected.get(i));

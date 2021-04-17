@@ -24,27 +24,29 @@ import treeechan.treepaech.lab10.PlayerFormV8;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class PlayerFormV9 extends PlayerFormV8 implements ActionListener {
+    protected ArrayList<JTextField> listTextField = new ArrayList<JTextField>();
 
     public PlayerFormV9(String titleName) {
         super(titleName);
     }
 
     @Override
-    public void handleSubmitButton() {
+    public void addComponents() {
+        super.addComponents();
         // Import JTextField into ArrayList.
-        ArrayList<JTextField> listTextField = new ArrayList<JTextField>();
         listTextField.add(name);
         listTextField.add(nationality);
         listTextField.add(birth);
+    }
+
+    @Override
+    public void handleSubmitButton() {
         // Check to see if JTextField has any spaces.
         if (name.getText().isEmpty() || nationality.getText().isEmpty() || birth.getText().isEmpty()){
             for (JTextField testTextField : listTextField) {

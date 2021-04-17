@@ -31,6 +31,10 @@ import java.io.File;
 
 public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
     protected JFileChooser fc = new JFileChooser();
+    protected File selectedOpenFile;
+    protected File selectedSaveFile;
+    protected int returnValSave;
+    protected int returnValOpen;
 
     public PlayerFormV8(String titleName) {
         super(titleName);
@@ -65,19 +69,19 @@ public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
         if (e.getSource() == exitItem){
             System.exit(0);
         } else if (e.getSource() == openItem){
-            int returnVal = fc.showOpenDialog(PlayerFormV8.this);
-            if (returnVal == JFileChooser.APPROVE_OPTION){
-                File selectedFile = fc.getSelectedFile();
-                String msg = "Open file " + selectedFile.getName();
+            returnValOpen = fc.showOpenDialog(PlayerFormV8.this);
+            if (returnValOpen == JFileChooser.APPROVE_OPTION){
+                selectedOpenFile = fc.getSelectedFile();
+                String msg = "Open file " + selectedOpenFile.getName();
                 JOptionPane.showMessageDialog(null, msg);
             } else {
                 JOptionPane.showMessageDialog(null, "Open command cancelled by user");
             }
         } else if (e.getSource() == saveItem){
-            int returnVal = fc.showSaveDialog(PlayerFormV8.this);
-            if (returnVal == JFileChooser.APPROVE_OPTION){
-                File selectedFile = fc.getSelectedFile();
-                String msg = "Save file " + selectedFile;
+            returnValSave = fc.showSaveDialog(PlayerFormV8.this);
+            if (returnValSave == JFileChooser.APPROVE_OPTION){
+                selectedSaveFile = fc.getSelectedFile();
+                String msg = "Save file " + selectedSaveFile;
                 JOptionPane.showMessageDialog(null, msg);
             } else {
                 JOptionPane.showMessageDialog(null, "Save command cancelled by user");
