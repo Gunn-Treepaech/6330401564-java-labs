@@ -50,7 +50,7 @@ public class PlayerFormV9 extends PlayerFormV8 implements ActionListener {
         // Check to see if JTextField has any spaces.
         if (name.getText().isEmpty() || nationality.getText().isEmpty() || birth.getText().isEmpty()){
             for (JTextField testTextField : listTextField) {
-                if ("".equalsIgnoreCase(testTextField.getText().trim())) {
+                if (testTextField.getText().trim().isEmpty()) {
                     resultBuffer.append(testTextField.getName());
                     resultBuffer.append(" is empty.");
                     resultBuffer.append("\n");
