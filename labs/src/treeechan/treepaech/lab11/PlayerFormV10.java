@@ -36,8 +36,8 @@ public class PlayerFormV10 extends PlayerFormV9 implements ActionListener {
     }
 
     public void setAnswer(){
-        int[] selected = new int[2];
-        int indexSelected = 0;
+        int[] IndexSelected = new int[3];
+        int index = 0;
         try {
             for (int i =0; i < dataList.size(); i++){
                 if (i < listTextField.size()){
@@ -60,13 +60,17 @@ public class PlayerFormV10 extends PlayerFormV9 implements ActionListener {
                     for (int c = 0; c< gameList.getModel().getSize();c++){
                         // Check which position is selected.
                         if (gameList.getModel().getElementAt(c).equalsIgnoreCase(dataList.get(i))){
-                            selected[indexSelected] = c;
-                            indexSelected++;
+                            IndexSelected[index] = c;
+                            index++;
                         }
                     }
                 }
             }
             // Set selection
+            int[] selected = new int[index];
+            for (int n = 0; n < index; n++){
+                selected[n] = IndexSelected[n];
+            }
             gameList.setSelectedIndices(selected);
         } catch (ArrayIndexOutOfBoundsException ex){
             ex.printStackTrace(System.err);
