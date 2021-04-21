@@ -17,11 +17,7 @@ import java.util.*;
 public class Test01  {
     protected String string;
     public static void main(String[] args) {
-        int i = 0;
-        while (i <= 15){
-            System.out.println((i % 2 == 0 ? "***" : "-----"));
-            i++;
-        }
+        System.out.println();
     }
 
 }
